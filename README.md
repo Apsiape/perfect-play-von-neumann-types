@@ -1,6 +1,6 @@
 # Perfect play has different arithmetical complexity in semifinite and type III algebras
 
-Seth Douglas and Nidhal Mghirbi. Version 1.0.0, November 2026.
+Seth Douglas and Nidhal Mghirbi. Version 1.0.0, November 2026. DOI: [10.5281/zenodo.23925092](https://doi.org/10.5281/zenodo.23925092).
 
 **This is a preprint. It has not been peer reviewed.**
 
