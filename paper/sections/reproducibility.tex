@@ -1,0 +1,35 @@
+
+\section{Verification and source provenance}\label{sec:repro}
+The portable verification program is
+\texttt{verification/check\_type\_ladder.py}.
+Run it from any directory with Python 3 (standard library only) and its explicit
+\texttt{--output-dir} option pointing to a new directory.
+It refuses to overwrite an existing results file.
+It uses exact rational identities for the finite tree and rational
+stand-in, randomized finitely supported group elements with a fixed
+seed for \eqref{eq:model18}, and numerical entropy and rotation checks. An exact-fraction enclosure
+certifies the golden-mean value at $y=1$, the $y=2$ comparison, and
+the rational base of the induction covering every $y\geq3$.
+The Boolean profile core tests every table reduction with unspecified
+coordinates adversarial, and enumerates all 7581 monotone five-input
+functions for the bounded obstruction remark.
+Exact checks are distinguished from floating-point checks in its JSON
+output. The checks are finite evidence, with the scope stated in
+\hyperref[sec:methods]{How this work was done}.
+
+The finite stand-in is not asserted to be a representation of an
+arbitrary $\mathcal G_e$ or its HNN extension. It tests the level-reader and
+terminal algebra with an explicit balanced involution.
+Existence of the actual finite von Neumann algebra for any good $n$
+rests on the HNN normal-form theorem and regular representation in
+Lemma~\ref{lem:hnn}.
+
+The source manifest records relative bundle paths and SHA256 hashes.
+The provenance record identifies external mathematical sources by
+DOI or arXiv identifier. The archive contains the authored
+paper sources and portable verification source, not live companion
+directories. \texttt{SHA256SUMS} uses LF line endings.
+The build script uses \texttt{pdflatex}, BibTeX, and repeat
+\texttt{pdflatex} runs, and rejects warnings, unresolved references,
+overfull boxes and underfull boxes in the final log.
+Rendered page images are inspected separately for layout.

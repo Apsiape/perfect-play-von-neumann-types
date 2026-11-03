@@ -1,0 +1,47 @@
+{
+  "title": "Perfect play has different arithmetical complexity in semifinite and type III algebras",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "version": "1.0.0",
+  "publication_date": "2026-11-03",
+  "creators": [
+    {
+      "name": "Douglas, Seth",
+      "orcid": "0009-0007-4708-3252"
+    },
+    {
+      "name": "Mghirbi, Nidhal",
+      "orcid": "0009-0005-6534-1118"
+    }
+  ],
+  "description": "For finite rational nonlocal games, existence of perfect normal play in a type II₁ algebra, a type II∞ algebra, or any semifinite algebra is Σ⁰₂-complete. For each fixed λ∈[0,1], existence in a type IIIλ factor is equivalent to commuting perfection and is Π⁰₁-complete. Existence of commuting perfect play together with absence of every normal semifinite perfect strategy is Π⁰₂-complete. Its hardness holds on a computable family whose every member is commuting perfect and has finite-dimensional quantum value one.\n\nThe lower bound combines a critical binary-tree selector, an effective group embedding, and a Boolean compiler on arbitrary faithful normal supports. The selector finds a finite terminal depth even in diffuse semifinite algebras. A finite-corner overlap criterion gives the upper bound. The perfect-play languages for type I and type II₁ are incomparable, and both are proper subsets of the type II∞ language. The type-I complexity used here is established in the companion paper. Two directional differences are D₂(Σ⁰₂)-complete: perfect play in type I but not in type II₁ (I-ONLY), and perfect spatial play attainable only with infinite entropy (INF-ENTROPY-ONLY). For semifinite-but-not-type-I play (II-ONLY) and its finite-entropy variant, completeness remains open; both are Σ⁰₂-hard and Π⁰₂-hard.",
+  "keywords": [
+    "von Neumann algebras",
+    "nonlocal games",
+    "arithmetical hierarchy",
+    "type III factors",
+    "quantum information",
+    "computability"
+  ],
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "language": "eng",
+  "notes": "Preprint. It has not been peer reviewed. Text: CC BY 4.0. Scripts: MIT or Apache 2.0.",
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.23910987",
+      "scheme": "doi",
+      "relation": "references"
+    },
+    {
+      "identifier": "10.5281/zenodo.23902656",
+      "scheme": "doi",
+      "relation": "references"
+    },
+    {
+      "identifier": "10.5281/zenodo.23787124",
+      "scheme": "doi",
+      "relation": "references"
+    }
+  ]
+}

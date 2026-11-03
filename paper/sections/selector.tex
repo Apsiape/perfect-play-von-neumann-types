@@ -1,0 +1,89 @@
+
+\section{A critical tree selects a finite depth}\label{sec:selector}
+Work on a faithful normal support. Let $P,Q$ be centralizer projections,
+$0\leq C\leq I$ a centralizer contraction, and let $B_0,B_1$ satisfy
+\begin{align}
+ B_i^*B_j&=\delta_{ij}(I-P),&
+ \sum_iB_iB_i^*&=I-Q,\label{eq:tree}\\
+ \sigma_t^\varphi(B_i)&=2^{-it}B_i,\label{eq:modular}\\
+ CQ&=Q,& CB_i&=\tfrac12B_iC,&[C,P]&=0.\label{eq:depth}
+\end{align}
+\begin{lemma}[Critical-tree selector]\label{lem:selector}
+In a normal semifinite realization, $P\ne0$, $\ker C=0$, and
+$E_n=1_{\{2^{-n}\}}(C)$ satisfy $\sum_{n\geq0}E_n=I$ strongly.
+Some finite $n$ has $PE_n\ne0$.
+\end{lemma}
+\begin{proof}
+The modular eigenoperators are entire analytic. KMS gives
+$\varphi(B_iB_i^*)=\varphi(B_i^*B_i)/2$. Summing gives
+\begin{equation}\label{eq:defectmass}
+ \varphi(P)=\varphi(Q).
+\end{equation}
+If $P=0$, faithfulness makes $Q=0$, giving a full Cuntz pair.
+Write $\varphi(x)=\tau(hx)$, $h$ injective, $\tau(h)=1$.
+The covariance is $h^{it}B_i=B_i(h/2)^{it}$, hence
+$f(h)B_i=B_if(h/2)$ for bounded Borel $f$.
+For bounded $g\geq0$ with compact support in $(0,\infty)$,
+$hg(h)$ is positive integrable, and
+\[
+ \varphi(g(h))=\sum_i\tau(B_i^*hg(h)B_i)
+ =\tfrac12\sum_i\tau(hg(h/2))=\varphi(g(h/2)).
+\]
+The trace exchange is
+$\tau(T^{1/2}vv^*T^{1/2})=\tau(v^*Tv)$ for positive integrable $T$.
+There is no permutation of arbitrary unbounded products.
+Use indicators of $(2^k,2^{k+1}]$, or monotone approximations to them.
+All these windows have equal $\varphi$-mass and partition $(0,\infty)$,
+whose mass is one. Countable additivity is contradicted. Thus $P\ne0$.
+
+Let $z=1_{\{0\}}(C)$. Covariance and its adjoint give
+$zB_i=B_iz$ by functional calculus at zero. Also $Qz=0$ and $[P,z]=0$.
+Since $z$ is a centralizer projection, $zMz$ is modularly invariant.
+The KMS calculation there gives $\varphi(Pz)=0$, hence $Pz=0$.
+If $z\ne0$, the normalized restriction of $\varphi$ is faithful normal
+on a semifinite corner with a full critical Cuntz pair. The same window
+argument excludes this. Hence $z=0$.
+
+Put $\mathcal T(X)=\sum_iB_iXB_i^*$. Telescoping gives
+\begin{equation}\label{eq:telescope}
+ I=\sum_{j=0}^{m-1}\mathcal T^j(Q)+\mathcal T^m(I).
+\end{equation}
+For a length-$m$ word $v$, $CB_v=2^{-m}B_vC$. Bounded spectral calculus
+puts its range in $1_{[0,2^{-m}]}(C)\mathcal H$. Thus
+\[
+ 0\leq\mathcal T^m(I)\leq1_{[0,2^{-m}]}(C)\longrightarrow0
+\]
+strongly by injectivity of $C$. Each $\mathcal T^j(Q)$ is supported
+in the $2^{-j}$ eigenspace of $C$. These positive terms sum to $I$
+and have mutually orthogonal spectral supports. Compressing the sum
+to each eigenspace gives
+\begin{equation}\label{eq:En}
+ E_j=\mathcal T^j(Q),\qquad \sum_{j\geq0}E_j=I.
+\end{equation}
+There is no residual spectral subspace since the sum is $I$.
+As $[P,C]=0$ and $P\ne0$, some $PE_n$ is nonzero. In particular $Q=E_0$.
+\end{proof}
+
+\subsection{Finite models and a small example}
+For words $w$ of length at most $n$, let $B_i$ append $i$ unless $w$
+is a leaf, when it vanishes. Let $Q$ select the empty word and $P$ the
+depth-$n$ words. Put
+\begin{equation}\label{eq:treeh}
+ C|w\rangle=2^{-|w|}|w\rangle,\qquad
+ h_n|w\rangle=\frac{2^{-|w|}}{n+1}|w\rangle.
+\end{equation}
+Each nonleaf has two distinct children and each nonroot a unique parent.
+This proves \eqref{eq:tree}, including the cross term.
+The child-to-parent density ratio is $1/2$, proving
+\eqref{eq:modular}; the same ratio for $C$ proves \eqref{eq:depth}.
+Each depth has state mass $1/(n+1)$, whence
+\begin{equation}\label{eq:treeentropy}
+ \varphi_n(P)=\varphi_n(Q)=\frac1{n+1},\qquad
+ S(h_n)=\log_2(n+1)+\frac n2.
+\end{equation}
+For $n=2$, the seven word densities are $1/3$, two copies of $1/6$,
+and four copies of $1/12$. Their $C$ labels are $1,1/2,1/4$.
+The leaf rank is four but its state mass is $1/3$.
+A finite host's normalized trace gives $\tau(P)\geq1/2$ from
+\eqref{eq:tree}; this does not bound $\varphi(P)$ away from zero
+uniformly over states.

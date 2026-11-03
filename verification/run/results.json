@@ -1,0 +1,208 @@
+{
+  "difference_profiles": {
+    "monotone_functions": 7581,
+    "optimistic_no_spatial_family": 0,
+    "profile_checks": 27,
+    "status": "PASS",
+    "transcript": "PASS E\\q  Sigma2-hard  G^s_e\nPASS I\\q  Sigma2-hard  G^s_e\nPASS J\\q  Sigma2-hard  G^t_e AND T\nPASS U\\q  Sigma2-hard  G^t_e AND T\nPASS C\\E  Pi2-hard  G_X(e) OR Q\nPASS C\\I  Pi2-hard  G_X(e) OR Q\nPASS C\\J  Pi2-hard  G_X(e) OR Q\nPASS C\\U  Pi2-hard  G_X(e) OR Q\nPASS C\\q  Pi1-hard  M_e AND R\nPASS C\\q  under omega_q=1: G_M OR KCat (Pi1 = not halts)\nPASS I\\J  D2-hard  Gamma\nPASS J\\I  D2-hard  Gamma\nPASS E\\J  D2-hard  Gamma\nPASS J\\E  D2-hard  Gamma\nPASS I\\E  D2-hard  L=G^s (L_E holds by Thm 7.1), H=KCat\nPASS U\\J  D2-hard  L=G^t (L_J holds by equation (31)), H=R\nPASS U\\I  Sigma2-hard  G_X(e) AND H\nPASS U\\I  Pi2-hard    G_Y(e) OR H\nPASS U\\E  Sigma2-hard  G_X(e) AND H\nPASS U\\E  Pi2-hard    G_Y(e) OR H\nPASS I\\E  Sigma2-hard  G_X(e) AND H\nPASS I\\E  Pi2-hard    G_Y(e) OR H\nPASS U\\J  Sigma2-hard  G_X(e) AND H\nPASS U\\J  Pi2-hard    G_Y(e) OR H\nPASS H_e = KCat OR V_e: in I always, in E iff FIN\nPASS paddings: OR Q fixes q..U, sets C=1; AND (R OR T) fixes E..C, kills q\nmonotone functions of 5 variables: 7581 (Dedekind number 7581)\nU\\I, families G^t, G^s, separator T (adversarial w): 0 monotone 5-input formulas realise A(e) & not A(f)\nU\\I, same, optimistic w = 0: 0 monotone 5-input formulas realise A(e) & not A(f)\ncontrol: shared family L_H present: 351 monotone 5-input formulas realise A(e) & not A(f)\nOne-bridge separator root: entropy 2.000000000000 bits\nCompanion Fock root: H = 1.748370832612, paper log2(4/3)+4/3 = 1.748370832612\none-bridge single isometry: H = 2.000000000000 (2 bits)\nscaffold mass check 1+4(2+4+8+16) = 121\n\nALL PASS\n",
+    "with_shared_family": 351,
+    "without_shared_family": 0
+  },
+  "group_exact": {
+    "exact_associativity_inverse_shift_trials": 2000,
+    "exact_selected_word_checks": 240,
+    "random_good_sets": 20,
+    "seed": 20261103
+  },
+  "reader_exact": [
+    {
+      "depth": 0,
+      "identities": "exact rational",
+      "stand_in_dimension": 4,
+      "terminal_residual": "zero"
+    },
+    {
+      "depth": 1,
+      "identities": "exact rational",
+      "stand_in_dimension": 12,
+      "terminal_residual": "zero"
+    },
+    {
+      "depth": 2,
+      "identities": "exact rational",
+      "stand_in_dimension": 28,
+      "terminal_residual": "zero"
+    },
+    {
+      "depth": 3,
+      "identities": "exact rational",
+      "stand_in_dimension": 60,
+      "terminal_residual": "zero"
+    },
+    {
+      "depth": 4,
+      "identities": "exact rational",
+      "stand_in_dimension": 124,
+      "terminal_residual": "zero"
+    }
+  ],
+  "rotation_numerical": {
+    "exact_all_y_certificate": {
+      "affine_lower_at_3": "248606797749978969640917366873127623544061835961152572427089724541052092563780487/50000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "affine_lower_slope": "27950849718747371205114670859140952943007729495144071553386215567631511570472561/12500000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "contraction": "all y>=1: |exp(2*pi*i*theta*y)-1|>2^(-y-1)",
+      "domain": "all integers y>=1",
+      "global_minimizer": 1,
+      "induction_inequality": "2*(sqrt(5)*y+1/2)>sqrt(5)*(y+1)+1/2 for y>=3",
+      "log2_margin_y1": "strictly between 2.89 and 2.9",
+      "ratio_y1_lower": "18640648476264552430680633373822093827723/2500000000000000000000000000000000000000",
+      "ratio_y1_upper": "74562593905058209722722533495288375310893/10000000000000000000000000000000000000000",
+      "ratio_y2_lower": "21615689416368756555020358339828089878753/2000000000000000000000000000000000000000",
+      "status": "PASS",
+      "tail_certificate": "y>=3: r_y>8>r_1; exact base plus paper's affine denominator inequality"
+    },
+    "global_bound": "4/(sqrt(5)*y+1/2) > 2^(-y-1), proved in paper",
+    "minimizer": 1,
+    "minimum_log2_margin": 2.8984520497570894,
+    "numerical_check": "double precision; no overflow from 2^y",
+    "rational_sufficient_certificate": "2^(y+3)>9*y/4+1/2 exact for 1<=y<4000",
+    "theta": "(sqrt(5)-1)/2",
+    "y_range": [
+      1,
+      3999
+    ]
+  },
+  "scope": "Finite identities only; not a proof of Higman, HNN embeddings, KMS or core classification.",
+  "script_sha256": "5f8f063cf240dea418f3823ca8e1c2e491ae23e36d4197ab7dbe22eaa1dd4619",
+  "separator_and_scaffolds": {
+    "chain_scaffolds": [
+      {
+        "bridges": 1,
+        "cover_mass": 9,
+        "root_mass": "1/9"
+      },
+      {
+        "bridges": 2,
+        "cover_mass": 25,
+        "root_mass": "1/25"
+      },
+      {
+        "bridges": 3,
+        "cover_mass": 57,
+        "root_mass": "1/57"
+      },
+      {
+        "bridges": 4,
+        "cover_mass": 121,
+        "root_mass": "1/121"
+      },
+      {
+        "bridges": 5,
+        "cover_mass": 249,
+        "root_mass": "1/249"
+      }
+    ],
+    "scope": "Finite matrix and geometric-series checks; infinite extraction is proved in the paper.",
+    "shift_truncations": [
+      {
+        "dimension": 2,
+        "entropy_partial_bits": "1",
+        "mass": "3/4"
+      },
+      {
+        "dimension": 3,
+        "entropy_partial_bits": "11/8",
+        "mass": "7/8"
+      },
+      {
+        "dimension": 4,
+        "entropy_partial_bits": "13/8",
+        "mass": "15/16"
+      },
+      {
+        "dimension": 5,
+        "entropy_partial_bits": "57/32",
+        "mass": "31/32"
+      },
+      {
+        "dimension": 6,
+        "entropy_partial_bits": "15/8",
+        "mass": "63/64"
+      },
+      {
+        "dimension": 7,
+        "entropy_partial_bits": "247/128",
+        "mass": "127/128"
+      },
+      {
+        "dimension": 8,
+        "entropy_partial_bits": "251/128",
+        "mass": "255/256"
+      },
+      {
+        "dimension": 9,
+        "entropy_partial_bits": "1013/512",
+        "mass": "511/512"
+      }
+    ]
+  },
+  "status": "PASS",
+  "tree_exact": [
+    {
+      "defect_state_mass": "1",
+      "depth": 0,
+      "dimension": 1,
+      "entropy_bits": -0.0,
+      "residual_squared_norm": "4"
+    },
+    {
+      "defect_state_mass": "1/2",
+      "depth": 1,
+      "dimension": 3,
+      "entropy_bits": 1.5,
+      "residual_squared_norm": "2"
+    },
+    {
+      "defect_state_mass": "1/3",
+      "depth": 2,
+      "dimension": 7,
+      "entropy_bits": 2.584962500721156,
+      "residual_squared_norm": "4/3"
+    },
+    {
+      "defect_state_mass": "1/4",
+      "depth": 3,
+      "dimension": 15,
+      "entropy_bits": 3.5,
+      "residual_squared_norm": "1"
+    },
+    {
+      "defect_state_mass": "1/5",
+      "depth": 4,
+      "dimension": 31,
+      "entropy_bits": 4.321928094887363,
+      "residual_squared_norm": "4/5"
+    },
+    {
+      "defect_state_mass": "1/6",
+      "depth": 5,
+      "dimension": 63,
+      "entropy_bits": 5.084962500721156,
+      "residual_squared_norm": "2/3"
+    },
+    {
+      "defect_state_mass": "1/7",
+      "depth": 6,
+      "dimension": 127,
+      "entropy_bits": 5.807354922057604,
+      "residual_squared_norm": "4/7"
+    },
+    {
+      "defect_state_mass": "1/8",
+      "depth": 7,
+      "dimension": 255,
+      "entropy_bits": 6.5,
+      "residual_squared_norm": "1/2"
+    }
+  ]
+}

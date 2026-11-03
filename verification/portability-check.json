@@ -1,0 +1,14 @@
+{
+  "checked_files": [
+    "results.json",
+    "run.txt"
+  ],
+  "different_working_directory": true,
+  "existing_output_hashes_unchanged": true,
+  "explicit_sibling_module_directory": true,
+  "isolated_python": true,
+  "nonempty_directory_exit_code": 2,
+  "relocated_results_byte_identical": true,
+  "script_sha256": "5f8f063cf240dea418f3823ca8e1c2e491ae23e36d4197ab7dbe22eaa1dd4619",
+  "status": "PASS"
+}

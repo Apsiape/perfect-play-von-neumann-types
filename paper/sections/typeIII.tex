@@ -1,0 +1,132 @@
+
+\section{Each type-III subtype has the commuting language}\label{sec:typeIII}
+The state and host may both be chosen. This quantifier is essential.
+
+\begin{backgroundlemma}[Expected-inclusion transfer; \cite{Takesaki,ReadType}]
+If $E:N\to M$ is a faithful normal conditional expectation, every
+faithful standard-form correlation on $M$ is realized on $N$.
+\end{backgroundlemma}
+\begin{proof}
+For the state $\varphi_N=\varphi_M\circ E$, put
+$\mathcal H_{\rm inc}=\overline{M\xi_{\varphi_N}}\subset L^2(N)$.
+The map $x\xi_{\varphi_M}\mapsto x\xi_{\varphi_N}$ is an isometry.
+Takesaki's expectation theorem \cite{Takesaki} makes $M$ invariant
+under the modular group. The Tomita operators agree on the common
+core $M\xi$, and their conjugations restrict as $\mathcal J_N|_{\mathcal H_{\rm inc}}=\mathcal J_M$.
+Thus for left effects $A$ and right effects $\mathcal J_MB\mathcal J_M$,
+\[
+ \langle\xi_{\varphi_N},A \mathcal J_NB\mathcal J_N\xi_{\varphi_N}\rangle
+ =\langle\xi_{\varphi_M},A \mathcal J_MB\mathcal J_M\xi_{\varphi_M}\rangle.
+\]
+Positivity, sums and all probabilities are preserved. Support
+reduction handles nonfaithful states. This is also
+\cite[Lemma 3.1]{ReadType}.
+\end{proof}
+
+\begin{lemma}\label{lem:absorb}
+For any factor $N_{\rm in}$ with separable predual, $N_{\rm in}\vN R_\infty$ is
+$\III_1$, and contains $N_{\rm in}$ with a faithful normal expectation.
+\end{lemma}
+\begin{proof}
+The expectation is $\operatorname{id}\otimes\rho$ for a faithful normal
+state $\rho$ on $R_\infty$.
+We use the proof, rather than the stronger hyperfinite conclusion,
+of \cite[Lemma 3.8]{HM}.
+For each $0<\lambda<1$, choose $0<\mu<1$ with
+$\log\lambda/\log\mu$ irrational.
+The injective factors satisfy
+$R_\infty\cong R_\lambda\vN R_\mu$ and
+$R_\infty\vN R_\lambda\cong R_\infty$.
+Consequently $(N_{\rm in}\vN R_\infty)\vN R_\lambda
+\cong N_{\rm in}\vN R_\infty$.
+The asymptotic-ratio argument of Connes \cite[Section 3.6]{Connes}, used in that proof, gives
+$\lambda\in r_\infty(N_{\rm in}\vN R_\infty)$.
+Connes's implication \cite[Theorem 3.6.1]{Connes} gives
+$r_\infty\setminus\{0\}\subseteq S$.
+Every $0<\lambda<1$ therefore belongs to the $S$-invariant, and the
+factor is $\III_1$. These steps do not assume hyperfiniteness of $N_{\rm in}$.
+Only the last identification with the unique injective $\III_1$
+factor in Haagerup--Musat needs hyperfiniteness, and we do not make
+that identification here.
+\end{proof}
+
+\begin{theorem}\label{thm:III}
+For each fixed $\lambda\in[0,1]$,
+$\perf(\III_\lambda)=\perf_{\co}$.
+\end{theorem}
+\begin{proof}
+The inclusion into commuting perfection is immediate.
+For the converse, standardize a commuting-perfect strategy and
+choose a factor host $N_{\rm in}$ by central decomposition as in
+Section~\ref{sec:intro}. Put $N_{\rm abs}=N_{\rm in}\vN R_\infty$.
+By expected-inclusion transfer and Lemma~\ref{lem:absorb}, this $\III_1$
+factor hosts the game. Retain it for $\lambda=1$.
+
+Fix a faithful normal state $\varphi$ on $N_{\rm abs}$.
+For a countable subgroup $\Gamma\subset\mathbb R$, given the discrete
+topology, form
+$N_\Gamma=N_{\rm abs}\rtimes_{\sigma^\varphi|_\Gamma}\Gamma$.
+The Fourier expectation onto $N_{\rm abs}$ is faithful normal, so transfers
+the game. It is a factor: $\mathrm T(N_{\rm abs})=\{0\}$ for a $\III_1$ factor, hence
+every nonzero modular time is outer.
+If a central element has Fourier coefficient $x_g$, commutation
+with $N_{\rm abs}$ makes $x_g$ an intertwiner between $\operatorname{id}$ and
+$\sigma_g^\varphi$. A nonzero such coefficient for $g\ne0$ would,
+by polar decomposition in a factor, implement that automorphism
+innerly. Thus only $g=0$ remains, and $x_0$ is scalar.
+Faithfulness of Fourier coefficients proves factoriality.
+
+The continuous core is the crossed product by the modular
+$\mathbb R$-action; its dual action restricted to the center is the
+\emph{flow of weights}. For factors this flow distinguishes the
+type-III subtypes \cite{ConnesTakesaki}.
+Here is the core computation, with the dual flow specified.
+The modular group of the dual state fixes the canonical unitaries
+$u_g$ of the discrete crossed product. Writing $\lambda(t)$ for
+the continuous-core implementing unitaries, it follows that
+\begin{equation}\label{eq:core}
+ \begin{split}
+ c(N_\Gamma)
+ &\cong c(N_{\rm abs})\rtimes_{\Ad\lambda(g)}\Gamma\\
+ &\cong c(N_{\rm abs})\vN L(\Gamma).
+ \end{split}
+\end{equation}
+For the second isomorphism the unitaries
+$w_g=\lambda(g)^*u_g$ commute with $c(N_{\rm abs})$ and satisfy the group
+law of $\Gamma$; the inverse sends $u_g$ to $\lambda(g)\otimes w_g$.
+Since $N_{\rm abs}$ is $\III_1$, $c(N_{\rm abs})$ is a factor, so the center is
+$L(\Gamma)=L^\infty(\widehat\Gamma)$.
+The dual action obeys
+$\theta_s(\lambda(t))=e^{-ist}\lambda(t)$ and
+$\theta_s(u_g)=u_g$; therefore
+$\theta_s(w_g)=e^{isg}w_g$.
+Its action on the center is translation by the character
+$\chi_s(g)=e^{isg}$.
+
+For $0<\lambda<1$, take
+$\Gamma=t_\lambda\mathbb Z$, $t_\lambda=2\pi/(-\log\lambda)$.
+The resulting flow is rotation on the circle with least period
+$-\log\lambda$, which is the flow of a $\III_\lambda$ factor \cite{ConnesTakesaki}.
+For $\lambda=0$ take $\Gamma=\mathbb Z+\sqrt2\mathbb Z$.
+Its dual is the two-torus, and the flow is
+$s\mapsto(e^{is},e^{i\sqrt2s})$.
+Fourier characters show ergodicity: an invariant character
+indexed by $(m,n)$ requires $m+n\sqrt2=0$, hence $m=n=0$.
+Every orbit is a dense one-dimensional subgroup coset of Haar
+measure zero (its bounded segments have zero area).
+Thus the flow is not transitive. The Connes--Takesaki flow
+classification \cite{ConnesTakesaki} gives subtype $\III_0$.
+This is the same modular crossed-product mechanism as
+\cite[Example 3.9]{HM}, without requiring injectivity of $N_{\rm abs}$.
+
+For clarity non-semifiniteness is a separate conclusion.
+The core flow of a semifinite factor is translation on
+$L^\infty(\mathbb R)$; it is transitive and admits no invariant
+normal probability state. Each of our circle or torus flows
+preserves Haar probability, so cannot be that semifinite flow.
+For $N_{\rm abs}$ itself non-semifiniteness was already proved by its
+$S$-invariant. Hence none of the subtype conclusions silently
+includes a semifinite alternative.
+\end{proof}
+Slofstra's commuting classification \cite{Slofstra}, also proved in \cite[Theorem 6.4]{MNY}, now proves
+$\Pi^0_1$-completeness for every fixed subtype, including zero.

@@ -1,0 +1,25 @@
+{
+  "external_sources": [
+    {"doi": "10.5281/zenodo.23910987", "role": "Spatial perfection and finite-entropy hardness; companion four-bridge specification"},
+    {"doi": "10.5281/zenodo.23902656", "role": "Catalan game, label refinement and rational-row compiler"},
+    {"doi": "10.5281/zenodo.23787124", "role": "Normal standard form, calibrated bridge and prior type-game separations"},
+    {"arxiv": "1107.1489v4", "role": "Effective Higman embedding, Theorem 2.2"},
+    {"doi": "10.1098/rspa.1961.0132", "role": "Higman embedding origin"},
+    {"doi": "10.1112/jlms/s1-24.4.247", "role": "HNN normal form"},
+    {"doi": "10.2307/2266324", "role": "Craig conversion origin"},
+    {"doi": "10.1515/CRELLE.2009.037", "role": "Absorption proof, Lemma 3.8"},
+    {"doi": "10.2748/tmj/1178240493", "role": "Flow-of-weights classification, Parts 1 and 2"},
+    {"doi": "10.24033/asens.1247", "role": "Connes Section 3.6 and Theorem 3.6.1"},
+    {"doi": "10.2307/1971057", "role": "Injective-factor classification"},
+    {"doi": "10.1016/0022-1236(72)90004-3", "role": "Expected-inclusion transfer"},
+    {"doi": "10.1007/BF02392262", "role": "Centralizer perturbation, Lemma 4.5"},
+    {"doi": "10.7146/math.scand.a-11740", "role": "Cuntz gauge KMS state"},
+    {"arxiv": "2605.22713v2", "role": "Cuntz factor identification; title taken from PDF page 1"},
+    {"arxiv": "1209.2729v3", "role": "Spatial implies finite for linear-system games"},
+    {"arxiv": "1606.02278", "role": "Solution-group criteria and Theorem 5"},
+    {"arxiv": "1703.08618", "role": "Nonclosure separation"},
+    {"arxiv": "1606.03140", "role": "Commuting perfection complexity"},
+    {"arxiv": "2110.04651v2", "role": "Commuting and value-one hierarchy results"},
+    {"arxiv": "2001.04383v4", "role": "Finite-dimensional perfect-completeness hardness"}
+  ]
+}

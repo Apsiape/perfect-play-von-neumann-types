@@ -1,0 +1,11 @@
+ALL CHECKS PASSED
+Separator shift truncations and chain scaffolds: exact rational identities.
+Exact finite trees: depths 0..7; relations, modular ratio, spectral levels, masses, residuals.
+Entropy: numerical logarithms plus exact rational mean depth.
+Exact tree x 4-dimensional stand-in: depths 0..4; (19)-(21) and graph expansion.
+Exact group model: 20 good sets, 2000 associativity/inverse/shift trials, 240 word checks.
+Golden mean: 1<=y<4000, minimum log2 margin 2.898452049757.
+Golden mean: exact y=1, y=2 enclosures, y=3 tail base and affine induction coefficient; the all-y conclusion is the paper's induction.
+Boolean table: adversarial profiles and all 7581 monotone five-input functions passed.
+All arithmetic for matrix and group identities is exact.
+No arbitrary Higman/HNN presentation is tested by the stand-in.

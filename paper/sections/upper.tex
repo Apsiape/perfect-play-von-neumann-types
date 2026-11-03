@@ -1,0 +1,111 @@
+
+\section{Finite-corner compactness}\label{sec:upper}
+\begin{lemma}[Finite-corner overlap]\label{lem:overlap}
+Let $\mathcal A,\mathcal B$ be commuting unital $C^*$-algebras containing
+a game's effects. Suppose unit vectors $\psi,\eta$ and
+$e=e^2=e^*\in\mathcal A$ satisfy: $\psi$ is perfect, $e\eta=\eta$,
+$\langle\eta,\psi\rangle\ne0$, and the vector state of $\eta$ is tracial
+on $e\mathcal A e$. Then the game has a perfect normal semifinite
+strategy. If $e=1$, it has a finite-algebra strategy.
+\end{lemma}
+\begin{proof}
+Let $\mathcal H_\eta=\overline{\operatorname{span}\mathcal A\mathcal B\eta}$.
+It reduces both algebras because they are self-adjoint and commute.
+Put $M=(\mathcal A|_{\mathcal H_\eta})''$ and $p=e|_{\mathcal H_\eta}$. The vector functional of $\eta$
+is normal on $M$ and tracial on $pMp$: Kaplansky density approximates
+each corner element by a bounded net from $p\mathcal A p$, and separate
+ultraweak continuity extends $\tau_\eta(xy)=\tau_\eta(yx)$ one variable
+at a time. Moreover
+\begin{equation}\label{eq:cornercyclic}
+ p\mathcal H_\eta=\overline{\operatorname{span}\mathcal B(pMp)\eta}.
+\end{equation}
+Indeed $pab\eta=bpap\eta$, and bounded strong approximation supplies the
+reverse closure. If $x\geq0$ in $pMp$ has $\tau_\eta(x)=0$, then
+\[
+ \|x^{1/2}a\eta\|^2=\tau_\eta(a^*xa)
+ =\tau_\eta(x^{1/2}aa^*x^{1/2})\leq\|a\|^2\tau_\eta(x)=0.
+\]
+Since $x$ commutes with $\mathcal B$, \eqref{eq:cornercyclic} gives $x=0$.
+Thus $pMp$ has a faithful normal finite trace.
+If a central projection $z$ of $M$ annihilates $p$, it annihilates
+$\eta$, and hence $\mathcal A\mathcal B\eta$ and $\mathcal H_\eta$; so $z=0$.
+Thus $p$ has full central support. A type-III summand has no nonzero
+finite projection, so its intersection with $p$ is zero and fullness
+excludes that summand. Consequently $M$ is semifinite.
+
+The orthogonal projection onto $\mathcal H_\eta$ commutes with both parties.
+$\zeta=P_{\mathcal H_\eta}\psi$ is nonzero by its overlap with $\eta$.
+Each losing positive product annihilates $\psi$ and hence $\zeta$.
+Normalize $\zeta$. Its state is normal on $M$ and Bob's compressed
+effects commute with $M$. If $e=1$, the faithful finite trace is on $M$.
+\end{proof}
+
+Conversely standardize a normal semifinite strategy and write
+$\psi=h^{1/2}\in L^2(M,\tau)$, with $\tau(h)=1$.
+Some band $e=1_{[a,b]}(h)$, $0<a<b<\infty$, is nonzero.
+It has $0<\tau(e)\leq1/a$. For $\eta=e/\sqrt{\tau(e)}$,
+\begin{equation}\label{eq:overlap}
+ \langle\eta,\psi\rangle
+ =\frac{\tau(eh^{1/2}e)}{\sqrt{\tau(e)}}
+ \geq\sqrt a\sqrt{\tau(e)}>0.
+\end{equation}
+Its corner state is tracial. In a finite algebra take a faithful
+normalized trace and $e=1$; then $\tau(h^{1/2})>0$.
+Adjoin $e$ to Alice's algebra if necessary.
+
+\begin{theorem}\label{thm:upper}
+$\perf_{\finhost}$ and $\perf_{\sfhost}$ belong to $\Sigma^0_2$.
+\end{theorem}
+\begin{proof}
+For $k\geq1$ seek moments $m_{ij}(w)=\langle\xi_i,w\xi_j\rangle$,
+where $\xi_0=\psi,\xi_1=\eta$. Letters are the self-adjoint effects and
+Alice's extra projection $e$. Impose positivity for all polynomial
+vector lists, localizing positivity for each effect and its complement,
+POVM normalization, Alice--Bob commutation \emph{including $e$},
+$e^2=e$, $e\eta=\eta$, unit norms, zero losing expectations on $\psi$,
+and
+\[
+ \Rea\langle\eta,\psi\rangle\geq1/k,\qquad
+ \langle\eta,eue\,eve\,\eta\rangle
+ =\langle\eta,eve\,eue\,\eta\rangle
+\]
+for all Alice words $u,v$, including $e$.
+A vector equality means vanishing squared norm.
+These form a recursive list of closed rational polynomial constraints.
+Impose $|m_{ij}(w)|\leq1$ directly. All genuine contraction moments obey
+this bound, and the ambient product of closed disks is compact.
+Localizing positivity gives bounded GNS effects $0\leq E\leq1$.
+One can also use the certificate
+$E-E^2=(I-E)E(I-E)+E(I-E)E$.
+
+At stage $m$ take the first $m$ constraints and their coordinates.
+Feasibility $F_{\sfhost}(G,k,m)$ is a non-strict rational semialgebraic
+question, decidable by real quantifier elimination.
+Its solution set is a closed cylinder in the compact product of all
+moment disks. The cylinders are nested because stages retain previous
+constraints. If every stage is feasible, their intersection is nonempty:
+otherwise their open complements have a finite subcover, already making
+one stage empty. A point of the intersection gives a positive
+matrix-valued functional. Quotient polynomial pairs by its null space
+and complete. Left multiplication yields the bounded GNS effects and
+the two vectors. Relations hold on the polynomial dense space and
+extend by boundedness. Corner traciality holds on the linear span of
+$eue$ and then in norm on $e\mathcal A e$.
+Apply Lemma~\ref{lem:overlap}. Conversely \eqref{eq:overlap} supplies some
+$k$ for every semifinite strategy. Thus
+\begin{equation}\label{eq:sigma2}
+ G\in\perf_{\sfhost}\iff\exists k\,\forall m\,F_{\sfhost}(G,k,m).
+\end{equation}
+Set $e=1$ for the finite-algebra version.
+\end{proof}
+
+Tensoring a finite factor host with $R_{\rm hyp}$ gives a $\II_1$ host.
+Tensoring a semifinite factor host with $R_{\rm hyp}\vN B(\ell^2)$ gives a
+$\II_\infty$ host. Product-state expectations, or standard-form tensoring,
+preserve the probabilities. Factor decomposition as in
+Section~\ref{sec:intro} therefore gives
+\begin{equation}\label{eq:languageequal}
+ \perf_{\finhost}=\perf(\II_1),\qquad
+ \perf_{\sfhost}=\perf(\II)=\perf(\II_\infty).
+\end{equation}
+These are equalities of existence languages.

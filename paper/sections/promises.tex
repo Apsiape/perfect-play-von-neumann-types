@@ -1,0 +1,108 @@
+
+\section{Both uniform promises and the hardness theorem}\label{sec:promises}
+\begin{theoremC}
+Uniformly from a total recursive $\mathcal R_{\rm dec}$ and an input $e$, the
+compiler gives a finite rational Boolean game $G_e$ such that
+\[
+ G_e\in\perf(\II_1)
+ \iff G_e\in\perf_{\sfhost}
+ \iff \exists n\,\forall s\,\mathcal R_{\rm dec}(e,n,s).
+\]
+For every input $e$, $G_e$ has a perfect $\III_{1/2}$ strategy and
+$\omega_q(G_e)=1$.
+\end{theoremC}
+\begin{proof}
+For the equivalence, soundness follows from the compiler and the
+selector and level-reader lemmas. A good $n$ gives a finite model
+by Lemma~\ref{lem:hnn}, which the compiler turns into perfect finite-host
+play and hence a $\II_1$ host.
+
+For the first uniform promise take the uniform KMS representation
+of $\mathcal O_2$ with generators $s_i$ satisfying
+$s_i^*s_j=\delta_{ij}I$, $\sum_i s_is_i^*=I$ and
+$\sigma_t(s_i)=2^{-it}s_i$.
+Its weak closure is $R_{1/2}$; see the Cuntz/KMS identification in
+\cite{OP} for the gauge KMS state and
+\cite[Theorem 4.9 and Example 4.13]{Harris} for this factor
+identification, also used in
+\cite[Section 3.1]{ReadType}.
+Set $B_i=s_i$, $P=Q=C=0$, and take all group generators, $T,L$ equal
+to $I$. Every root equation holds: $LQ=cQ$ and the terminal row
+are vacuous. In the scaffold \eqref{eq:scaffold},
+$b_i=e_{10}\otimes s_i$ is centralizer.
+Its exact two-unitary completion exists in the finite centralizer,
+as proved above. The encoding of $C=0$ is $u_C=-I$ on each corner;
+the zero projections use reflection $-I$ there as well.
+Their transported block labels commute with the ideal signs.
+Thus every compiler gadget has a simultaneous perfect realization.
+The host, including all finite ancillary matrices, is
+$\III_{1/2}$.
+
+For the second promise take the finite-tree strategy $\mathcal V_N$
+with the depth-$N$ finite tree and trivial group labels. Every root equation is exact except the terminal row.
+Its residual is
+\begin{equation}\label{eq:residual}
+ \Delta_N=2P,\qquad
+ \varphi_N(\Delta_N^*\Delta_N)=4\varphi_N(P)=\frac4{N+1}.
+\end{equation}
+Build all graph, prefix, joint and column measurements by their exact
+formulas even for this nonzero application row. All their structural
+tests remain exact. Only its final row-zero event can lose.
+An \emph{honest row} is the self-adjoint rational projection sum
+implemented by the exact graph and prefix assignment of the
+completeness construction. For such a row $\mathsf S_{\rm row}$, that construction gives
+\begin{equation}\label{eq:rowloss}
+ p(\Pi_0^{\rm row},\Pi_d)=\frac{4\ell_{\rm row}^2}{d^3}\,\varphi_{\rm old}(\mathsf S_{\rm row}^2),
+\end{equation}
+the normal trace formulation of \cite[Eq.~(32)]{Entropy}.
+Indeed the scalar density supplies $1/d$, and the two normalized
+column/reference vectors supply the other two factors of $1/d$.
+
+More explicitly, if the lifted root residual is $p=e_0\Delta_N$, its
+graph row has off-diagonal blocks $p,p^*$. The qutrit trace and
+root mass give
+\[
+ \varphi_{\rm old}(S_{\rm graph}^2)
+ =\tfrac13\varphi_{\rm sc}(p^*p+pp^*)
+ =\tfrac{2}{27}\varphi_N(\Delta_N^*\Delta_N).
+\]
+The last equality uses traciality on the centralizer.
+The \emph{padded question count} is the common size of the two
+question sets after adding always-accepted fresh questions.
+An \emph{orientation} is a choice of which party receives the
+row question and which receives the scalar reference question.
+If $N_e$ is that count and $\ell_e,d_e$ are the row
+denominator and slot dimension, union bounding any repeated
+orientations gives, for example,
+\[
+ 1-\omega(G_e,\mathcal V_N)
+ \leq \frac{64\ell_e^2}{27d_e^3N_e^2}\,\frac1{N+1}.
+\]
+Using a larger constant covers duplicate copies of the terminal test
+if the chosen encoding retains any. There are finitely many,
+determined solely by $e$.
+With $m_e\geq1$ the finite number of retained copies, take
+\[
+ C_e=m_e\frac{64\ell_e^2}{27d_e^3N_e^2}.
+\]
+Thus $C_e$ depends only on the finite compiled specification,
+denominators, row dimensions and the fixed root mass $1/9$.
+It is independent of $N$, the density spectrum and the finite tree
+dimension. Letting $N\to\infty$ proves $\omega_q(G_e)=1$.
+\end{proof}
+
+Choose $\mathcal A_{\rm dec}$ to be $\Sigma^0_2$-complete.
+Theorem~C and \eqref{eq:languageequal}, together with
+Theorem~\ref{thm:upper}, prove $\Sigma^0_2$-completeness of every
+claimed semifinite existence language.
+Furthermore every $G_e$ is commuting perfect and has quantum value one,
+and
+\[
+ G_e\in\III\text{-}\mathrm{ONLY}\iff e\notin\mathcal A_{\rm dec}.
+\]
+This proves $\Pi^0_2$-hardness within that promise, a stronger statement
+than hardness of intersection with the value-one language.
+Membership follows from
+$\perf_{\co}\in\Pi^0_1$ and
+$\perf_{\sfhost}^c\in\Pi^0_2$:
+their intersection is $\Pi^0_2$.

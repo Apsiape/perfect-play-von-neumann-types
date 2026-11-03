@@ -1,0 +1,551 @@
+
+\section{One bridge compiles the normal-host reduction}\label{sec:compiler}
+We extend the label refinement and rational-row tools of
+\cite[Lemma 4.2 and Theorem B]{Entropy} from spatial strategies to normal
+commuting strategies. The finite predicates are retained. The proofs
+below specify where separation replaces Schmidt-range cancellation.
+
+\subsection{The calibrated normal bridge}
+Here FMS means \emph{flagged magic square}; Fu--Miller--Slofstra
+are cited by name. A question or projection is \emph{synchronized}
+when a binary event is perfectly matched with its opposite-party
+copy; on faithful support it is a centralizer projection with its
+standard commutant mirror. Here is the finite predicate, in zero-based indices.
+Alice asks $R_0,R_1,R_2,T_0,T_1$ and Bob asks $C_0,C_1,C_2,U_0,U_1$.
+A row answer is a flag $f$ or a triple of product $+1$.
+A column answer is $f$ or a triple of product $+1,+1,-1$ in the
+respective columns. At $(R_i,C_j)$ flags must match; nonflags agree
+on their intersecting cell. Choose $\gamma_0=\rho_0=(+++)$ and
+$\gamma_1=\rho_1=(+--)$. At $T_x$ replace $f,\gamma_x$ by signs $+,-$ and retain
+the other three column-zero triples; $U_y$ does the same with
+$f,\rho_y$ in row zero. At $(T_x,C_0)$ signs may match only $f,\gamma_x$,
+and retained triples must equal Bob's triple. Impose the symmetric
+rule at $(R_0,U_y)$. At $(T_x,U_y)$ two signs $a,b$ must obey
+$ab=(-1)^{xy}$; pairs with a retained triple are accepted.
+Unspecified pairs are accepted.
+
+\begin{center}\small
+\begin{tabular}{@{}p{.24\linewidth}p{.66\linewidth}@{}}
+\toprule Question pair & Winning rule\\\midrule
+$(R_i,C_j)$ & flags match; nonflags agree at cell $(i,j)$\\
+$(T_x,C_0)$ & a sign pairs only with $f,\gamma_x$; retained triples match\\
+$(R_0,U_y)$ & symmetric calibration at $\rho_y$\\
+$(T_x,U_y)$ & two signs obey $ab=(-1)^{xy}$; a retained triple is accepted\\
+Conditional copy & both inactive or both active; activity, flags and selected events match their binary names\\
+Other pairs & all valid answer pairs accepted\\\bottomrule
+\end{tabular}
+\end{center}
+
+Conditional copies also have an inactive answer; reject exactly one
+inactive answer, and bind activity, flags and the stated magic events
+to named synchronized binary questions.
+
+The Pauli square of Mermin--Peres \cite{Mermin,Peres} is
+\[
+ \begin{pmatrix}XI&IX&XX\\ IZ&ZI&ZZ\\ XZ&ZX&YY\end{pmatrix}.
+\]
+Its four column-zero outcome projections are
+$m_{00},m_{01},m_{10},m_{11}$ in the order
+$(+++),(+--),(-+-),(--+)$.
+On Alice, read $m_{00}$ from the retained answer of $T_1$ and the
+other three from $T_0$; on Bob read them from $C_0$.
+Bind each chosen occurrence to the opposite binary name.
+Also bind positive $ZI$ from Alice's $R_1$ component 1 and Bob's
+$C_1$ component 1, and positive $IX$ from Alice's $R_0$ component 1
+and Bob's $C_1$ component 0. If $M_{\rm mag}=\sum m_{ab}$, put
+\[
+ x=I-2M_{\rm mag}+2E_{ZI,+},\qquad
+ z=I-2M_{\rm mag}+2E_{IX,+}.
+\]
+These are centralizer reflections, identity off the magic support.
+They transport $m_{00}$ to $m_{ab}$ by $x^az^b$.
+
+For clarity we recall the arbitrary-normal bridge argument of
+\cite[Lemma 2.2]{ReadType}. Matching makes the cells sharp centralizer
+effects. Write the upper-left four cell reflections as $a,b,c,d$.
+The row/column relations give
+$[a,b]=[a,c]=[b,d]=[c,d]=0$,
+$(ac)(bd)=-(ab)(cd)$, and $[ac,bd]=0$.
+Canceling the outside $a,d$ gives $cb=-bc$; substitution into the
+last commutator gives $ad=-da$.
+The two commuting Pauli pairs therefore generate centralizer $M_4$.
+In $\mathbb C^2\otimes\mathbb C^2$ the calibrated unit vectors are
+$\mathfrak c_x=|+\rangle\otimes|x\rangle$ and
+$\mathfrak r_y=|+\rangle\otimes|(-1)^y\rangle$, where
+$|+\rangle=(|0\rangle+|1\rangle)/\sqrt2$ and
+$|(-1)^y\rangle=(|0\rangle+(-1)^y|1\rangle)/\sqrt2$.
+Choose a minimal magic projection $q$ and centralizer partial
+isometries $u_x,v_y$ with initial projection $q$ and ranges the
+projections onto $\mathfrak c_x,\mathfrak r_y$ (tensored with the
+multiplicity identity). Choose their phases so that their overlap is
+$u_x^*v_y=(-1)^{xy}q/\sqrt2$.
+If $\Delta_x^A,\Delta_y^B$ are the original sign differences,
+their pull-backs on the standard corner
+$(f+q)\mathcal J(f+q)\mathcal J L^2(M)$ are
+\[
+ X_x=(f+u_x^*)\Delta_x^A(f+u_x),\qquad
+ Y_y=\mathcal J(f+v_y^*)\mathcal J\Delta_y^B \mathcal J(f+v_y)\mathcal J.
+\]
+They are commuting self-adjoint contractions.
+Their joint-support vector is
+\[
+ \theta_{xy}=(f+(-1)^{xy}q/\sqrt2)\xi_\varphi .
+\]
+Forbidden sign events give
+$X_x\theta_{xy}=(-1)^{xy}Y_y\theta_{xy}$ and
+$X_xY_y\theta_{xy}=(-1)^{xy}\theta_{xy}$.
+The multiplier $f\pm q/\sqrt2$ is bounded invertible in the corner
+centralizer, so $\theta_{xy}$ separates both corner algebras.
+Commuting the opposite contraction through the first identity gives
+$X_x^2\theta_{xy}=\theta_{xy}$ and $Y_y^2\theta_{xy}=\theta_{xy}$;
+separation makes them reflections.
+Put $\kappa=f+q/\sqrt2$. The three positive cells give
+$X\kappa\xi_\varphi=Y\kappa\xi_\varphi$ and identify
+$X_0=X_1=X$ and $Y_0=Y_1=Y$
+by separation on $\kappa\xi$. The fourth vector is $Z\kappa\xi$, $Z=f-q$.
+Its equation is $XZ\kappa\xi=-YZ\kappa\xi=-ZY\kappa\xi=-ZX\kappa\xi$,
+since opposite algebras commute. Separation gives $XZ=-ZX$.
+Thus $X=v+v^*$, $v=qXf$, $v^*v=f$, $vv^*=q$.
+The mirror equation means that $X$ centralizes
+$\omega(\cdot)=\varphi((f+q/2)\cdot)$.
+The bounded centralizer perturbation formula of Pedersen--Takesaki \cite[Lemma 4.5]{PT}
+$\sigma_t^\omega(y)=k^{it}\sigma_t^\varphi(y)k^{-it}$,
+$k=f+q/2$, gives on the $q$--$f$ block
+\begin{equation}\label{eq:bridge}
+ \sigma_t^\varphi(v)=2^{it}v,\qquad \varphi(q)=2\varphi(f).
+\end{equation}
+The last equality is KMS. Multiplication by the magic matrix units
+gives all four transports. If one sector vanished, the off-diagonal
+reflection would kill the other; hence on a nonzero active corner
+both sectors are nonzero. No finite multiplicity is used.
+
+\begin{lemma}[Commuting label refinement]\label{lem:refine}
+Retain the old FMS questions. For a synchronized projection $Z_0$, add
+$T_0[Z_0]$ with answers $(a,z_0)$, use the old rule after forgetting
+$z_0$ against unchanged $U_0,U_1,C_0$, and match $z_0$ to Bob's
+binary $Z_0$. Add the symmetric refined $U_0[Z_0]$ against unchanged
+$T_0,T_1,R_0$. Retain activity matching.
+In every perfect normal commuting strategy the coarse effects equal
+the original effects and commute with $Z_0$. Conversely, commuting
+labels give perfect refinements. Separate labels need not commute.
+\end{lemma}
+\begin{proof}
+Calibration fixes the retained effects and the sign support.
+Pull the new coarse sign difference $X'$ to the same corner.
+Against the unchanged opposite sign it satisfies
+$X'\theta_{0y}=Y_y\theta_{0y}=X_0\theta_{0y}$.
+The separating vector above gives $X'=X_0$.
+Thus its coarse effects $E_a$ are the old projections.
+For the fine effects $Q_{a,z_0}$, label matching gives
+$\sum_aQ_{a,1}=Z_0$ and $\sum_aQ_{a,0}=I-Z_0$ on faithful support.
+Positivity gives $0\leq Q_{a,1}\leq E_a,Z_0$ and
+$0\leq Q_{a,0}\leq E_a,I-Z_0$.
+Hence $E_aZ_0=Q_{a,1}=Z_0E_a$, using completeness of each marginal.
+This proves commutation, and the symmetric argument handles Bob.
+Conversely use the joint products $E_aZ_0,E_a(I-Z_0)$.
+Each label has its own refined question with the same unchanged
+opposite signs, so there is no cross-label commutation constraint.
+\end{proof}
+
+\subsection{Graphs turn products into rational rows}
+All projections here are synchronized, hence centralizer projections.
+For orthogonal $F_i,F_j$, $F_{ij}=F_i+F_j$, impose
+\begin{equation}\label{eq:graph}
+ G+K_G=F_{ij},\quad H_G+K_H=F_{ij},\quad 5H_G+F_{ij}=3F_i+4G .
+\end{equation}
+On $F_{ij}$, $Z=F_i-F_j$ and $X=2G-F_{ij}$ are reflections.
+Since $2H_G-F_{ij}=(3Z+4X)/5$, squaring gives $ZX+XZ=0$.
+Therefore
+\[
+ X=\begin{pmatrix}0&u_{ij}\\u_{ij}^*&0\end{pmatrix},
+ \qquad u_{ij}^*u_{ij}=F_j,\quad u_{ij}u_{ij}^*=F_i.
+\]
+For a triple partition $F_1+F_2+F_3=I$, impose these graphs on
+all pairs and add a projection $\Pi_\triangle$ with
+$3\Pi_\triangle=2(G_{12}+G_{23}+G_{13})-I$.
+Its diagonal blocks are $I/3$, off-diagonal blocks $u_{ij}/3$.
+The $(1,3)$ block of $\Pi_\triangle^2=\Pi_\triangle$ gives $u_{13}=u_{12}u_{23}$.
+Conversely this identity makes the entire block matrix a projection.
+A reference identity triangle gives the scalar $M_3$ frame.
+We call this the \emph{qutrit frame}: its three diagonal projections
+and identity graph projections specify the matrix units of a common
+scalar $M_3$, so all application operators act on its multiplicity
+space.
+Triangles $(U,1,U)$ and $(1,U,U)$ identify all placements of a unitary;
+a triangle $(U,V,W)$ then certifies $W=UV$.
+An inverse is a product equal to the identity. Take proper prefixes
+of the finite input word list to make all required products explicit.
+
+To bind a prescribed synchronized projection $E$, introduce
+projections $EF_i,NF_i$ with
+$EF_i+NF_i=F_i$, $\sum_iEF_i=E$, $\sum_iNF_i=I-E$.
+For each $ij$ put $F_{ij}=F_i+F_j$ and add a joint partition
+$B^{ij}_{00}+B^{ij}_{01}+B^{ij}_{10}+B^{ij}_{11}=F_{ij}$ with marginals
+$EF_i+EF_j$ and $G_{ij}(1)$; the fifth, inactive outcome is $I-F_{ij}$.
+Define $G_{ij}(s_E)=B^{ij}_{11}+B^{ij}_{00}$, the equal-bit event inside $F_{ij}$.
+Sharp marginals make these actual joint products.
+They force $E$ to commute with the frame and give
+$s_E=2e-I$ when $E=I_3\otimes e$.
+Thus the parameter is the specified old event.
+
+For a real rational polynomial $p=\sum_wq_wU_w$, the row
+\begin{equation}\label{eq:offdiag}
+ 2\sum_wq_wG_{12}(U_w)
+ -\left(\sum_wq_w\right)(F_1+F_2)=0
+\end{equation}
+has off-diagonal blocks $p,p^*$, so enforces even a non-self-adjoint
+equation $p=0$. These arguments are bounded operator identities
+in the centralizer, which is finite: $\varphi|_{M_\varphi}$ is a
+faithful normal trace.
+
+\begin{lemma}[Rational rows on normal commuting hosts]\label{lem:rows}
+Given finitely many synchronized projections and real rational linear
+identities among them, a finite Boolean extension enforces those
+identities on faithful normal commuting supports. Every realization
+extends after finite matrix amplification in standard form, preserving
+the old nonsynchronous tests and the host type.
+\end{lemma}
+\begin{proof}
+We give the finite extension and both directions.
+Certify scalar $M_{d_{\max}}$ by synchronized magic squares, with
+$d_{\max}$ a power of four. Joint questions between axes of distinct
+squares force their commutation; the Pauli calculation above identifies
+the tensor matrix algebra. Joint questions between every old projection
+and every axis force the old projections into its commutant.
+Thus old projections are $I\otimes e_i$ and scalar matrix units are
+centralizer elements. Bind global $X$ and $Z$ bit measurements to the axes.
+
+For a row $\mathsf S_{\rm row}=\alpha_0I+\sum_i\alpha_i e_i$, clear denominators with $\ell_{\rm row}$.
+Using $s_i=2e_i-I$, write $2\ell_{\rm row}\mathsf S_{\rm row}$ as a list of signed reflections
+$V_j\in\{\pm I,\pm s_i\}$ with sum $2\ell_{\rm row}\mathsf S_{\rm row}$ and first slot $V_0=I$.
+Add cancelling $I,-I$ pairs as needed and pad to a power of four $d$.
+Its length can be even because the coefficient sum
+$2\ell_{\rm row}\alpha_0+2\sum_i\ell_{\rm row}\alpha_i$ is even.
+For each $j\ne0$, joint scalar parity questions certify
+\[
+ \Pi_j^\pm=\tfrac12(|0\rangle\pm|j\rangle)
+                 (\langle0|\pm\langle j|).
+\]
+Explicitly use $X^j$ and a basis of the commuting $Z$ parities
+$j^\perp$; select zero syndrome and the indicated sign.
+Joint questions of $e_i$ with this three-outcome scalar measurement
+certify the graph coarse events
+$G_j^\pm=\frac12\left(\begin{smallmatrix}I&\pm V_j\\
+\pm V_j^*&I\end{smallmatrix}\right)$ on coordinates $0,j$.
+Here $V_j$ is self-adjoint. The displayed $2\times2$ matrix acts
+on $\operatorname{span}\{|0\rangle,|j\rangle\}$ tensored with the
+old space and is zero on the remaining scalar coordinates.
+
+Add a synchronized partition $(\Pi_t^{\rm row})_{t\in\mathbb F_2^{\log_2d}}$.
+Forbid $\Pi_t^{\rm row}$ with $G_j^-$ when
+$\chi_t(j)=(-1)^{t\cdot j}=1$, and with $G_j^+$ otherwise.
+A forbidden pair with mirror $\mathcal JG\mathcal J$ gives
+$\Pi_t^{\rm row}G\xi_\varphi=0$, since $\mathcal JG\mathcal J\xi_\varphi=G\xi_\varphi$;
+separation gives $\Pi_t^{\rm row}G=0$. Thus a vector in $\ran \Pi_t^{\rm row}$ has
+coordinates $v_j=\chi_t(j)V_jv_0$.
+Define isometries
+\[
+ I_tu=d^{-1/2}(\chi_t(j)V_ju)_j,\qquad P_t=I_tI_t^*.
+\]
+Character orthogonality gives $I_t^*I_u=\delta_{tu}I$ and
+$\sum_tP_t=I$, without commutation of distinct $V_j$.
+Hence $\Pi_t^{\rm row}\leq P_t$; the two partitions sum to $I$, so $\Pi_t^{\rm row}=P_t$.
+Finally forbid $\Pi_0^{\rm row}$ with the scalar projection
+$\Pi_d=|+_d\rangle\langle+_d|$, the all-positive global $X$ event.
+Then
+\[
+ I_0^*\Pi_dI_0=d^{-2}\Big(\sum_jV_j\Big)^*
+                         \Big(\sum_jV_j\Big)
+\]
+vanishes exactly when $\mathsf S_{\rm row}=0$.
+
+Conversely amplify by $M_{d_{\max}}$ with normalized trace.
+Use the actual scalar Paulis, joint products and projections $P_t$.
+All are centralizer projections. Bob uses $\mathcal J_{\rm new}X\mathcal J_{\rm new}$
+for each projection $X$. For a centralizer word $xy$,
+$\mathcal J(xy)\mathcal J\xi_\varphi=(xy)^*\xi_\varphi$; adjunction supplies the
+reversed order. Thus Bob's products are the actual transferred
+products, even when the old projections do not commute.
+Every structural forbidden event is zero, and the final event is
+zero precisely for a zero row. Old measurements act trivially on
+the new matrix factor, preserving all old probabilities.
+Finite matrix amplification preserves all indicated factor types.
+\end{proof}
+
+\subsection{The complete one-bridge assembly}
+Use five orthogonal synchronized corners
+$e_0,m_{00},m_{01},m_{10},m_{11}$ covering $I$, with one FMS copy
+whose flag is $e_0$ and magic support is their other four corners.
+Put $e_1=m_{00}$. The actual bridge $v:e_0\to e_1$ obeys
+\eqref{eq:bridge}. KMS and the cover give $\varphi(e_0)=1/9$ and
+$\varphi(m_{ab})=2/9$. These masses are independent of the root model.
+
+\begin{figure}[ht]
+\centering
+\[
+ \underbrace{e_0}_{1/9}
+ \ \xrightarrow[\sigma_t^\varphi(v)=2^{it}v]{v}\
+ \boxed{\underbrace{m_{00}=e_1}_{2/9}\quad
+ m_{01}\quad m_{10}\quad m_{11}}
+ \qquad\text{each magic corner has mass }2/9.
+\]
+\caption{One calibrated bridge. All copies of transported labels use
+this same $v$; the box is the four-dimensional magic support.}
+\end{figure}
+
+Bind the five corners and the two positive $ZI,IX$ parameters to the
+qutrit frame. Introduce the two axis unitaries $x,z$ with the explicit
+formulas above. A \emph{typed label} is an operator name together with its required
+class (projection, positive contraction or unitary).
+The transported typed label list is exactly
+\begin{equation}\label{eq:labels}
+ Q,\ C,\ T,\ L,\ \{U_g:g\text{ is a generator of }\mathcal G_e\}.
+\end{equation}
+Encode a projection by a reflection, a positive contraction by
+$u_C=2C-I+2i\sqrt{C(I-C)}$, and a unitary directly.
+A \emph{unitary name} is a formal generator for the chosen unitary
+encoding, including separate names for separate summands when needed.
+For each resulting unitary name $k$ introduce copies $u_{r,k}$,
+$r=0,1$, with $(u_{r,k}-I)(I-e_r)=0$.
+The \emph{decoded copies} are the actual corner operators recovered
+from these encodings by the following formulas, respectively:
+$e_r(I+u_{r,Q})/2$,
+$e_r(2I+u_{r,C}+u_{r,C}^*)/4$, and $e_ru_{r,k}$.
+Require $u_{r,Q}^2=I$.
+Introduce a block unitary
+\[
+ V_k=e_0u_{0,k}+
+ \sum_{a,b}x^az^b e_1u_{1,k}z^{-b}x^{-a}.
+\]
+Refine the retained FMS signs separately for the six frame projections
+\[
+ F_1,\quad F_2,\quad F_3,\quad G_{12}(1),\quad G_{13}(1),\quad G_{23}(1),
+\]
+and for every $G_{12}(V_k)$.
+Lemma~\ref{lem:refine} first makes $v$ preserve the
+frame, so $v=I_3\otimes\widetilde v$.
+The graph-label commutators in the target--source block give
+\begin{equation}\label{eq:transport}
+ vu_{0,k}=u_{1,k}v.
+\end{equation}
+Thus the same actual calibrated transport works for every label.
+Transport of decoded adjoints and polynomials follows too.
+$P$ is root-only, encoded by $P_0=e_0(I+u_P)/2$ with
+$u_P^2=I$ and $(u_P-I)(I-e_0)=0$.
+
+Introduce two centralizer contractions $b_i=e_1b_ie_0$.
+For compilation encode each as an average of two global unitaries.
+Extract $B_i=v^*b_i$ on $e_0Me_0$.
+Their modular eigenvalue is $1/2$ because that of $b_i$ is one.
+The complete endpoint translation is
+\begin{center}\small
+\begin{tabular}{@{}ll@{}}
+\toprule Root relation & Centralizer polynomial\\\midrule
+$B_i^*B_j=\delta_{ij}(I-P)$
+& $b_i^*b_j=\delta_{ij}(e_0-P_0)$\\
+$\sum_iB_iB_i^*=I-Q$ & $\sum_i b_ib_i^*=e_1-Q_1$\\
+$CB_i=\frac12B_iC$ & $C_1b_i=\frac12b_iC_0$\\
+$U_gB_i=B_iU_g$ & $(U_g)_1b_i=b_i(U_g)_0$\\
+$TB_i=B_iT$ & $T_1b_i=b_iT_0$\\
+$LB_i=B_i aLa^*$ & $L_1b_i=b_i a^{[0]}L_0(a^{[0]})^*$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Every remaining relation is a root centralizer polynomial:
+the finite relators of $\mathcal G_e$, $C_0Q_0=Q_0$, $[C_0,P_0]=0$,
+$[U_g,C_0]=[T_0,C_0]=0$,
+$L_0Q_0=c^{[0]}Q_0$, $[L_0,C_0]=[L_0,P_0]=0$,
+and the terminal equation.
+Expand its root projection as $P=(I+s_P)/2$.
+Here $a^{[0]},c^{[0]}$ mean the source words for the embedded $a,c$. If $W=[b,L]$, its non-self-adjoint polynomial is explicitly
+\[
+ p=\tfrac12\bigl(TWT^*+W+s_PTWT^*+s_PW\bigr).
+\]
+Use \eqref{eq:offdiag} for these words and their prefixes.
+In global scaffold coordinates multiply by $e_0$ and expand
+$e_0=(I+s_{e_0})/2$ as well. This forces $p=0$ and $p^*=0$ via
+the two off-diagonal blocks; it never assumes $PW$ self-adjoint.
+Expand all other typed polynomials in the same manner, apply
+graphs and triangles, then Lemma~\ref{lem:rows}. Retain all FMS and
+refinement questions. Sample all padded question pairs uniformly,
+reject the listed events, and accept unspecified pairs.
+This is an effective finite rational Boolean game, denoted $G_e$.
+
+\subsection{Soundness and simultaneous completeness}
+Soundness uses the nonzero root corner with normalized state
+$9\varphi|_{e_0Me_0}$. Equations \eqref{eq:transport} and the table
+give all root relations as bounded operator identities.
+For example $C_0v^*=v^*C_1$ gives
+$C_0B_i=v^*C_1b_i=B_iC_0/2$.
+Conjugating the range equation by $v^*$ uses $v^*Q_1v=Q_0$.
+The corner of a semifinite host is semifinite, so
+Lemmas~\ref{lem:selector} and \ref{lem:reader} prove soundness.
+
+Conversely take any faithful normal root realization $(M,\varphi)$.
+On $M_5\vN M$ use the state
+\begin{equation}\label{eq:scaffold}
+ \varphi_{\rm sc}=\operatorname{diag}(1,2,2,2,2)/9\ \otimes\varphi.
+\end{equation}
+Use the identity corner maps $v=e_{10}\otimes I$, the ideal real
+FMS effects, and $b_i=e_{10}\otimes B_i$.
+The product modular group makes each $b_i$ centralizer because
+the two modular eigenvalues $2$ and $1/2$ cancel.
+The whole centralizer is finite, with its faithful trace
+$\varphi_{\rm sc}$.
+For any contraction $x$ in a finite von Neumann algebra, the polar
+partial isometry extends to a unitary $u$: equivalent initial and
+final projections have equivalent complements in a finite algebra.
+Then
+\[
+ u_\pm=u(|x|\pm i\sqrt{I-|x|^2}),\qquad x=(u_++u_-)/2.
+\]
+This supplies the exact encodings of both $b_i$ at once.
+Use $2Q-I,2P-I$ and the displayed functional-calculus encoding of
+$C$, copying the same choices to each required corner.
+Amplify by the scalar qutrit frame. All block labels commute with
+the ideal FMS signs, so use their actual joint products for refinement.
+Separate labels use separate questions.
+Finally apply the standard-form construction in
+Lemma~\ref{lem:rows}, with Bob's effects defined by its conjugation
+$\mathcal J_{\rm new}$. Formula \eqref{eq:scaffold} and the ideal real FMS
+effects give exactly the five-dimensional FMS probabilities, including
+the nonsynchronous signs. All graph and endpoint identities hold
+simultaneously. A finite-algebra root stays finite; after tensoring
+with $R_{\rm hyp}$ a $\II_1$ host exists. A $\III_{1/2}$ root stays
+$\III_{1/2}$ under the finite amplifications.
+
+\Needspace{10\baselineskip}
+\subsection{Chained bridges}
+\begin{lemma}[Chained bridges]\label{lem:chain}
+For any fixed $k\geq1$, the conditional FMS predicates, individual
+label refinements and rational rows above compile the following
+finite root specifications on arbitrary normal commuting supports.
+The centralizer labels have prescribed types (projection, positive
+contraction, contraction or unitary). Each edge $A_\alpha$ has modular
+ratio $2^{-k}$, with isometry and range equations and endpoint
+relations $L_{\rm end}A_\alpha=A_\beta B_{\rm end}$ or $L_{\rm end}A_\alpha=0$; $L_{\rm end},B_{\rm end}$ are real rational
+polynomials in the typed centralizer labels (for example $B_{\rm end}=C/2$). Other relations are root
+centralizer polynomials with real rational coefficients.
+Every perfect strategy extracts that root specification on a
+nonzero corner. Every faithful normal root realization extends
+simultaneously to a perfect strategy after finite amplification,
+preserving its factor type and, for a spatial finite-entropy model,
+finiteness of entropy. Only labels occurring at a left endpoint (including a range-equation
+label) need transport; transporting further labels is permitted and
+changes neither direction.
+\end{lemma}
+\begin{proof}
+Use the synchronized partition
+\[
+ e_0+\sum_{g=1}^k \mathsf M_g=I,\qquad
+ \mathsf M_g=\sum_{\epsilon,\delta\in\{0,1\}}m_{g,\epsilon\delta},\qquad e_g=m_{g,00}.
+\]
+For bridge $g$ use a conditional FMS copy with flag $e_{g-1}$,
+magic support $\mathsf M_g$, and activity $a_g=e_{g-1}+\mathsf M_g$.
+The inactive effect is $I-a_g$. Match activity on every conditional
+question and bind the flag and four chosen magic events to their
+named binary projections, in both party orientations. The
+flag/four-magic/inactive column partition then has precisely these
+six marginals. Different copies have disjoint question names;
+no agreement between their nonsynchronous signs is imposed.
+
+The one-bridge proof applies in each $a_gMa_g$. Indeed $a_g$ is
+centralizer, so its normalized restriction has the restricted
+modular group. It gives $w_g^*w_g=e_{g-1}$, $w_gw_g^*=e_g$ and
+$\sigma_t^\varphi(w_g)=2^{it}w_g$. These equations extend by zero
+off $a_g$ and imply
+\[
+ v^{(k)}=w_k\cdots w_1,\quad
+ (v^{(k)})^*v^{(k)}=e_0,\quad
+ v^{(k)}(v^{(k)})^*=e_k,\quad
+ \sigma_t^\varphi(v^{(k)})=2^{kit}v^{(k)}.
+\]
+This is an extracted operator, never a centralizer word submitted
+to the graph compiler. KMS and the magic matrix units give
+\[
+ \varphi(m_{g,\epsilon\delta})=2^g\varphi(e_0),\qquad
+ Z_k^{\rm sc}=1+4\sum_{g=1}^k2^g,\qquad \varphi(e_0)=(Z_k^{\rm sc})^{-1}.
+\]
+If an active corner vanishes its flag and all four magic corners
+vanish together; otherwise the local bridge makes all five
+nonzero. The recurrence therefore holds also before nonvanishing
+is known, and the cover proves that $e_0\ne0$.
+
+Bind every corner and every positive Pauli parameter to the same
+qutrit frame. Let $\Lambda$ be the unitary encodings of the labels to be transported,
+including every label used on a left endpoint: use a unitary directly,
+a reflection for a projection, the displayed functional calculus for a
+positive contraction, and two unitaries for a general contraction.
+Introduce the axis labels $x_g=I-2\mathsf M_g+2E_{g,ZI,+}$ and
+$z_g=I-2\mathsf M_g+2E_{g,IX,+}$ of each bridge as in
+Section~\ref{sec:compiler}. For each $\ell_{\rm lab}\in\Lambda$
+and $r=0,\ldots,k$, impose
+$(u_{r,\ell_{\rm lab}}-I)(I-e_r)=0$. Introduce a unitary label $V_{g,\ell_{\rm lab}}$ and impose
+\[
+ V_{g,\ell_{\rm lab}}=I-a_g+e_{g-1}u_{g-1,\ell_{\rm lab}}
+  +\sum_{\epsilon,\delta}x_g^\epsilon z_g^\delta e_gu_{g,\ell_{\rm lab}}z_g^{-\delta}x_g^{-\epsilon}.
+\]
+The orthogonal block supports make this a unitary. At bridge $g$
+apply Lemma~\ref{lem:refine} separately to the six frame projections
+and to each $G_{12}(V_{g,\ell_{\rm lab}})$. There is one refinement of each
+retained sign question per label per bridge, on each party, always
+against the unchanged opposite questions. There is no joint
+refinement of distinct labels. The frame refinements give
+$w_g=I_3\otimes\widetilde w_g$. In the selected magic--flag block
+the graph commutator is exactly
+\[
+ w_gu_{g-1,\ell_{\rm lab}}=u_{g,\ell_{\rm lab}}w_g.
+\]
+Induction gives $(L_{\rm end})_kv^{(k)}=v^{(k)}(L_{\rm end})_0$ for every decoded transported
+label and its adjoints and words. Labels used only at the source
+need one source encoding and no refinement.
+
+For each edge introduce a centralizer contraction
+$b_\alpha=e_kb_\alpha e_0$ and extract
+$A_\alpha=(v^{(k)})^*b_\alpha$. Compile the centralizer equations
+\[
+ b_\alpha^*b_\beta=\delta_{\alpha\beta}e_0,\qquad
+ \sum_\alpha b_\alpha b_\alpha^*=e_k-(P_\circ)_k,
+ \qquad (L_{\rm end})_kb_\alpha=b_\beta (B_{\rm end})_0
+\]
+for the corresponding root equations; the zero endpoint uses zero
+on the right. The equations with a specified initial defect use
+that defect in the first right side. More generally a range equation
+$\sum_\alpha A_\alpha A_\alpha^*=R_{\rm ran}$, with
+$R_{\rm ran}$ a transported centralizer polynomial, is compiled as
+$\sum_\alpha b_\alpha b_\alpha^*=(R_{\rm ran})_k$.
+For the Catalan input this is $R_{\rm ran}=I-BB^*-P$; its
+centralizer contraction $B$ and projection $P$ are already in the
+transported list. Multiplying by $v^{(k)}$ or
+its adjoint proves both directions, since its initial and final
+projections are $e_0,e_k$. Every root-only polynomial stays at
+$e_0$. In particular the edge has modular ratio $2^{-k}$ and all
+labels refer to the same extracted root operators. Graphs,
+triangles and Lemma~\ref{lem:rows} enforce these finitely many
+centralizer polynomials without changing the conditional tests.
+This proves commuting soundness.
+
+For completeness take a faithful normal root $(N,\psi)$ and on
+$\mathbb M_{1+4k}\bar\otimes N$ put
+\[
+ \psi_{\rm sc}=(Z_k^{\rm sc})^{-1}\operatorname{diag}
+ (1;\,2^{\oplus4};\,4^{\oplus4};\,\ldots;\,(2^k)^{\oplus4})
+ \otimes\psi.
+\]
+Choose the actual matrix corner maps for $w_g$, the ideal real FMS
+effects on $a_g$, and $I-a_g$ for every inactive answer.
+Take $b_\alpha=|e_k\rangle\langle e_0|\otimes A_\alpha$.
+Its modular ratio is $2^k2^{-k}=1$, so it lies in the finite
+centralizer. Its polar partial isometry therefore has a unitary
+completion, giving its two-unitary encoding. Choose the root
+centralizer encodings once and copy them identically to the required
+corners. All $V_{g,\ell_{\rm lab}}$ then commute with the FMS effects at their
+own bridge, even though adjacent activities overlap at $e_g$.
+Use their actual joint products for the separate refinements.
+Append the common scalar frame and row factors and use standard
+commutant mirrors as in Lemma~\ref{lem:rows}. All old conditional
+probabilities and every added row are simultaneously correct.
+Only finite matrix factors have been appended. Their state entropy
+is finite; in the spatial case it adds to the root entropy.
+This proves completeness and the stated preservation properties.
+\end{proof}

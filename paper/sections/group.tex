@@ -1,0 +1,130 @@
+
+\section{A finite presentation verifies the depth}\label{sec:group}
+Fix a total recursive predicate $\mathcal R_{\rm dec}(e,n,s)$ and
+$\mathcal A_{\rm dec}=\{e:\exists n\,\forall s\,\mathcal R_{\rm dec}(e,n,s)\}$.
+With $[x,y]=xyx^{-1}y^{-1}$ set
+\begin{equation}\label{eq:group}
+ \begin{split}
+ \Gamma_e=\langle a,b,c\mid {}&
+ w_n^2=1\ (n\geq0),\\[-2pt]
+ &w_n=1\text{ if }\exists s\,\neg\mathcal R_{\rm dec}(e,n,s)\rangle,
+ \qquad w_n=[b,a^nca^{-n}].
+ \end{split}
+\end{equation}
+\begin{lemma}\label{lem:group}
+$w_n$ is nontrivial in $\Gamma_e$ exactly when
+$\forall s\,\mathcal R_{\rm dec}(e,n,s)$; a nontrivial $w_n$ has order two.
+Uniformly there is a finite presentation $\mathcal G_e$ and explicit words
+for embedded $a,b,c$ preserving this property.
+\end{lemma}
+\begin{proof}
+Let $\mathcal D_{\rm good}\subseteq\mathbb N$ be the good integers.
+Take two copies of $V=\bigoplus_{m\in\mathbb Z}\mathbb F_2\varepsilon_m$ and
+$W=\bigoplus_{k\in\mathcal D_{\rm good}}\mathbb F_2z_k$.
+Define $\beta(\varepsilon_m,\varepsilon_\ell)=z_{\ell-m}$ if $\ell-m\in\mathcal D_{\rm good}$, zero otherwise.
+On $V\oplus V\oplus W$ put
+\begin{equation}\label{eq:model18}
+ (x,y,z)(x',y',z')=(x+x',y+y',z+z'+\beta(x,y')).
+\end{equation}
+Bilinearity makes the third coordinate in either association
+$z+z'+z''+\beta(x,y')+\beta(x,y'')+\beta(x',y'')$.
+The identity is $(0,0,0)$; the inverse of $(x,y,z)$ is
+$(x,y,z+\beta(x,y))$.
+Simultaneously shifting both $V$ indices preserves $\beta$; adjoin
+this automorphism as $a$. Put $b=(\varepsilon_0,0,0)$ and $c=(0,\varepsilon_0,0)$.
+Multiplication gives $w_n=(0,0,z_n)$ for $n\in\mathcal D_{\rm good}$, identity otherwise.
+All relators hold, and every good word has a nontrivial order-two image.
+Bad words are killed by listed relators, proving the assertion.
+
+For precision we give a uniform Craig conversion \cite{Craig} of the c.e.\
+relator list to a decidable literal-word list. Chiodo's convention
+already permits recursive enumeration, so this extra normalization
+is optional for the cited embedding theorem. Here is a Craig conversion that
+also preserves the old generator words. Adjoin $d$ with relator $d=1$.
+For an enumerated relator $r$ at time $t$, replace that occurrence
+by the literal word $r d^k$, where distinct increasing codes
+$k$ are chosen effectively with $k\geq t$. Given a word of length
+$\ell$, membership in the resulting literal relator set is decidable
+by simulating the first $\ell$ enumeration steps, constructing those
+coded words of length at most $\ell$, and comparing literally.
+Use freely reduced old words $r$, which contain no $d$; the final
+$d^k$ therefore survives free reduction. Include $d$ itself as a
+relator. Modulo $d=1$, the coded relations are exactly the original $r$.
+The group is therefore unchanged and the old generator images remain
+explicit. Higman embedding \cite{Higman}, in the effective uniform formulation
+of \cite[Theorem 2.2]{Chiodo}, gives a finite presentation with an explicit
+injective embedding. Injectivity preserves the nontrivial $w_n$.
+The model \eqref{eq:model18} need not itself be computable.
+\end{proof}
+
+Represent the generators of $\mathcal G_e$ by centralizer unitaries satisfying
+its finite relators. Add centralizer unitaries $T,L$.
+Require every group generator and $T$ to commute with $B_0,B_1,C$.
+Impose
+\begin{equation}\label{eq:reader19}
+ LQ=cQ,\quad LB_i=B_i aLa^*,\quad [L,C]=[L,P]=0,
+\end{equation}
+and the centralizer polynomial
+\begin{equation}\label{eq:terminal}
+ P\bigl(T[b,L]T^*+[b,L]\bigr)=0.
+\end{equation}
+\begin{lemma}[Level reader]\label{lem:reader}
+In every semifinite realization $LE_n=a^nca^{-n}E_n$.
+The terminal equation then implies that some $n$ is good.
+\end{lemma}
+\begin{proof}
+Group generators commute with $C$, hence with $Q=E_0$.
+In particular $a^*Q=Qa^*$; this is needed in the induction.
+For a word $v$ of length $n$, the endpoint equation and commutation
+of $a$ with the $B_i$ give
+$LB_vQ=B_v a^nLa^{-n}Q=B_va^nca^{-n}Q$.
+By \eqref{eq:En} these ranges span $E_n\mathcal H$, proving the level identity.
+A unitary commuting with $B_i$ also commutes with $B_i^*$: commute
+its inverse, then take adjoints. It therefore commutes with $P$.
+Thus $PE_n$ reduces the group generators, $T$ and $L$.
+Choose a nonzero such sector by Lemma~\ref{lem:selector}.
+On it \eqref{eq:terminal} becomes $Tw_nT^*=-w_n$.
+A bad $n$ has relator $w_n=I$, giving $I=-I$ on a nonzero space.
+This contradiction proves goodness.
+\end{proof}
+
+\begin{lemma}[Finite realization]\label{lem:hnn}
+A good $n$ gives a finite-algebra realization of all relations.
+\end{lemma}
+\begin{proof}
+In $\mathcal G_e\times\langle j\mid j^2=1\rangle$, the subgroup
+$\langle w_n,j\rangle$ is $C_2^2$. The map
+$w_n\mapsto jw_n$, $j\mapsto j$ is its automorphism.
+Form the HNN extension $\mathcal K_n$ with stable letter $T$:
+\begin{equation}\label{eq:hnn}
+ Tw_nT^{-1}=jw_n,\qquad TjT^{-1}=j.
+\end{equation}
+The HNN normal-form theorem \cite{HNN} embeds the base group.
+Consequently $j\ne1$, and $j$ commutes with the base and with $T$,
+so is central in $\mathcal K_n$. This is the group-extension mechanism used
+in the nonlocal-game setting of \cite{Slofstra}.
+In $L(\mathcal K_n)$, $p_-=(1-\lambda(j))/2$ is central and has trace $1/2$.
+The corner $N=p_-L(\mathcal K_n)$ with trace $2\tau$ is finite.
+Compressed group unitaries are unitaries of $N$, and
+\eqref{eq:hnn} becomes $Tw_nT^*=-w_n$.
+
+Tensor $N$ with the depth-$n$ tree, with density $h_n\otimes1$
+relative to matrix trace times the normalized trace of $N$.
+Group generators and $T$ are constant across vertices.
+Set $L=a^dca^{-d}$ on depth $d$.
+It is a unitary centralizer label commuting with $P,C$.
+On a nonleaf, $LB_i=B_i aLa^*$ because depth increases by one;
+both sides vanish on a leaf. At the root $LQ=cQ$.
+The terminal equation is the sign-flip identity on the leaves and
+is vacuous elsewhere. The tree relations hold by \eqref{eq:treeh}.
+Tensor with $R_{\rm hyp}$ and select a factor fibre to obtain a $\II_1$ host.
+The presentation itself never needs to find the good $n$.
+\end{proof}
+
+For a small example, at good depth $n=1$ the tree is
+$\{\emptyset,0,1\}$ and the blocks of $L$ are
+$c,aca^{-1},aca^{-1}$. The terminal word is $w_1=[b,aca^{-1}]$.
+The model \eqref{eq:model18} with good set $\{1\}$ sends it to
+$z_1\ne1$, while $w_0,w_2$ vanish. The HNN step flips the chosen
+involution after compression to $j=-1$. One $T$ is not required
+to flip all good words.

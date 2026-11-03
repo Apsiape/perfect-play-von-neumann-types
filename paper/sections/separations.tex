@@ -1,0 +1,220 @@
+
+\section{The type-I and finite-type-II languages are incomparable}\label{sec:sep}
+\subsection{A fixed one-bridge separator}\label{sec:shiftseparator}
+Apply the complete one-bridge assembly of Section~\ref{sec:compiler}
+to the fixed root presentation
+\begin{equation}\label{eq:shiftroot}
+ A^*A=I,\qquad AA^*=I-P_\circ,\qquad
+ \sigma_t^\varphi(A)=2^{-it}A,
+\end{equation}
+where $P_\circ$ is a centralizer projection. Call the resulting
+finite rational Boolean game $R_*$. Here the transported label list
+contains just $P_\circ$. Encode its copies by reflections, introduce
+a centralizer contraction $b=e_1be_0$, and impose exactly
+\[
+ b^*b=e_0,\qquad bb^*=e_1-(P_\circ)_1.
+\]
+Use the six frame refinements and the graph-label refinement for
+$P_\circ$ from Section~\ref{sec:compiler}; apply the same graphs,
+triangles and rational rows. Extraction is $A=v^*b$, and
+$P=(P_\circ)_0$. Thus $A^*A=e_0$, $AA^*=e_0-P$, and the modular
+ratio is $1/2$. Conversely every root model of
+\eqref{eq:shiftroot} extends by that assembly, with $b=e_{10}\otimes A$.
+This specifies the game without a chained-bridge hypothesis.
+
+For its type-I model take $\ell^2(\mathbb N_0)$,
+$A|m\rangle=|m+1\rangle$, $P_\circ=|0\rangle\langle0|$, and
+\[
+ h|m\rangle=2^{-m-1}|m\rangle,\qquad
+ S(h)=\sum_{m\geq0}(m+1)2^{-m-1}=2\text{ bits}.
+\]
+The relation $hA=Ah/2$ verifies modular covariance.
+The scaffold and the finite maximally entangled compiler factors
+add finite entropy, so $R_*$ is perfect spatially with finite entropy.
+
+In any perfect finite-host strategy, extraction takes place in the
+nonzero finite corner $e_0Me_0$. Its isometry $A$ must be unitary:
+a faithful finite trace gives $\tau(e_0-AA^*)=0$. Consequently
+$AA^*=e_0$ forces $P=0$. On the other hand KMS for the original
+faithful state gives
+\[
+ \varphi(AA^*)=\tfrac12\varphi(A^*A)=\tfrac12\varphi(e_0),
+ \qquad \varphi(P)=\tfrac12\varphi(e_0)>0,
+\]
+a contradiction. Therefore $R_*$ has no finite host and witnesses
+$\perf(\mathrm I)\not\subseteq\perf(\II_1)$.
+In particular it has no finite-dimensional perfect strategy.
+
+\subsection{What happens to the old Weyl-clock family}
+The companion reduction \cite[Sections 4--7]{Spatial} uses four Fock
+isometries $A_{ab}$ on words in $\{0,1\}^2$ with
+\[
+ A_{ab}^*A_{cd}=\delta_{ac}\delta_{bd}I,\qquad
+ \sum_{ab}A_{ab}A_{ab}^*=I-P_\circ,\qquad
+ h_FA_{ab}=A_{ab}h_F/16,
+\]
+where $h_F(w)=(3/4)16^{-|w|}$.
+Depth $m$ is a $2^m$ square with coordinates
+$x=\sum a_j2^{j-1}$, $y=\sum b_j2^{j-1}$.
+Its centralizer coordinate unitaries increment $x,y$ cyclically;
+its boundary projections select $x=0,y=0$.
+The clock labels satisfy
+\[
+ J_{\rm W}K_{\rm W}=Z_{\rm clk}K_{\rm W}J_{\rm W},\quad
+ W|_{(x,y)}=Z_{\rm clk}^y,\quad C_{\rm ctr}|_{(x,y)}=2^{-y}.
+\]
+The reader equations are
+\begin{equation}\label{eq:oldreader}
+ (W-I)P_{\rm ret}=0,\qquad
+ T_{\rm inv}(W-I)=\tfrac12C_{\rm ctr}(I-P_{\rm ret}).
+\end{equation}
+Spatial soundness uses finite positive density eigenspaces and a
+determinant to force a finite-order phase. This determinant is unavailable
+in a diffuse finite factor.
+
+Here is a normal $\II_\infty$ model of \emph{every} input of that family.
+Put $\theta=(\sqrt5-1)/2$, $\zeta=e^{2\pi i\theta}$.
+In the finite rotation factor
+$L^\infty(\mathbb T)\rtimes_\theta\mathbb Z$, take unitaries
+$J_{\rm W},K_{\rm W}$ with commutator $\zeta I$ and put
+$Z_{\rm clk}=\zeta I$.
+The invariant integral and Fourier coefficient at zero give a faithful
+finite trace. Irrational rotation is free and ergodic, so a central
+Fourier coefficient vanishes except at zero and its zero coefficient
+is constant; the algebra is a factor. It is infinite-dimensional and
+hence $\II_1$. It is the hyperfinite factor $R_{\rm hyp}$ by amenability of this
+crossed product and injective-factor classification \cite{Connes76}.
+The construction itself only needs that it is finite.
+
+Use the tensor density $h_F\otimes1$ on
+$B(\ell^2(\mathcal W))\vN R_{\rm hyp}$.
+Set $W=\zeta^y$, $C_{\rm ctr}=2^{-y}$,
+$P_{\rm ret}=1_{\{y=0\}}$, and
+\[
+ T_{\rm inv}|_{(x,y)}=
+ \begin{cases}0,&y=0,\\
+ 2^{-y-1}(\zeta^y-1)^{-1},&y>0.
+ \end{cases}
+\]
+We verify its norm globally, not just by a finite numerical sweep.
+For an integer $q$ nearest to $y\theta$, the nonzero integer
+$q^2+qy-y^2$ factors as
+$(q-y\theta)(q-y\theta')$, $\theta'=-(1+\sqrt5)/2$.
+Since $|q-y\theta|\leq1/2$,
+\[
+ \|y\theta\|\geq\frac1{\sqrt5\,y+1/2},\qquad
+ |\zeta^y-1|=2\sin(\pi\|y\theta\|)
+ \geq\frac4{\sqrt5\,y+1/2}>2^{-y-1}.
+\]
+The sine inequality uses concavity, $\sin(\pi t)\geq2t$
+for $0\leq t\leq1/2$. In particular it supplies the explicit
+all-integer bound $|\sin(\pi y\theta)|\geq8/(11y)$, since
+$\sqrt5<9/4$ and $y\geq1$.
+For the last inequality it suffices to replace $\sqrt5$ by $9/4$:
+$2^{y+3}>9y/4+1/2$ for $y=1$, and doubling proves it inductively.
+Thus $T_{\rm inv}$ is a contraction and
+\eqref{eq:oldreader} holds. The binary coordinate recurrences
+$y\mapsto2y+b$ verify the clock and counter endpoint equations.
+
+In the companion's tableau \cite[Sections 5.3 and 7]{Spatial} a waiting front advances one cell per time step, at $x=y$ at time $y$.
+The first positive-time return pulse $P_{\rm ret}$ freezes it, and the frozen coordinate becomes the unary input of the check of the hardwired predicate; the time-zero pulse is ignored. Here $P_{\rm ret}$ selects $y=0$ only, so no positive-time pulse occurs. The front never freezes, and the companion decoder never starts a checking computation, irrespective of the hardwired input. Its finite deterministic tableau relations are
+satisfied by that classical nonhalting tableau in every finite square.
+The coordinate, boundary and tableau projections are diagonal on word
+sectors and commute with $h_F\otimes1$.
+All endpoint labels have the required centralizer type.
+Lemma~\ref{lem:chain} with $k=4$ applies to exactly the conditional copies and transported labels of \cite[Section 4.4 and Lemma 4.4]{Spatial} and to the endpoint rows of \cite[Sections 5--7]{Spatial}.
+Its left-endpoint labels are $P_\circ,U_x,U_y,P_x,P_y,W,C_{\rm ctr},
+Z_{\rm clk},J_{\rm W},K_{\rm W}$; source-only labels are
+$P_{\rm ret},T_{\rm inv}$ and the tableau projections. The activity
+corners and separate refinements coincide with that compiler.
+Its root mass is $1/121$.
+The resulting ambient host is $\II_\infty$ for every input.
+Put $r_y=2^{y+1}|\zeta^y-1|$. The global minimum of
+$\log_2 r_y$ is attained at $y=1$, and
+\begin{equation}\label{eq:margin}
+ 2.89<\log_2 r_1<2.9,\qquad
+ \log_2 r_1=2.898452049757\ldots.
+\end{equation}
+Here is a certificate, including the infinite tail. For $y\geq3$,
+the preceding bound gives
+$r_y\geq2^{y+3}/(\sqrt5\,y+1/2)>8$: at $y=3$ use
+$\sqrt5<9/4$, and the ratio increases because
+$2(\sqrt5\,y+1/2)>\sqrt5\,(y+1)+1/2$.
+For $y=2$ the exact certificate described below gives $r_2>8$.
+For $y=1$ it gives $1<r_1<8$ and
+$r_{1,-}^{100}>2^{289}$, $r_{1,+}^{10}<2^{29}$ for rational
+bounds $r_{1,-}<r_1<r_{1,+}$.
+To construct them, enclose $\sqrt5$ by integer square roots at scale
+$10^{80}$, and $\pi$ by
+$16\arctan(1/5)-4\arctan(1/239)$ with 60 alternating terms and
+the next-term remainder. Evaluate $\sin(\pi\theta)$ at the
+rational endpoints using 40 alternating terms and the next term;
+sine is decreasing on this interval in $(\pi/2,\pi)$.
+Round outward to denominator $10^{40}$ and compare the displayed
+integer powers. For $y=2$, use
+$|\sin(2\pi\theta)|=\sin(\pi(2\theta-1))$; its argument is in
+$(0,\pi/2)$, where sine increases, and the same series gives
+$16\sin(\pi(2\theta-1))>8$.
+The bundled exact-fraction routine implements these instructions.
+It certifies the $y=1,2$ enclosures and the rational base and
+coefficient inequality used in the tail estimate. Together with
+the induction above these prove the minimum over all positive
+integers; the 3999-point floating sweep is supplementary.
+The weaker positive margin is all that contractivity requires.
+
+Lemma~\ref{lem:chain}, with $k=4$, also extracts the four
+isometries of every companion game in any normal commuting host.
+Two isometries with orthogonal ranges cannot lie in a nonzero finite
+corner. Hence every companion game has no finite host. This additional
+fact is independent of the separator $R_*$ above.
+
+\subsection{A tracial game with no spatial perfection}
+For the other direction use a linear-system game with a perfect
+commuting strategy and no perfect finite-dimensional strategy,
+provided by \cite{SlofstraNonclosed}.
+This does not assert that linear-system games are synchronous.
+The solution-group criterion \cite[Theorems 4--5]{CLS} says its
+distinguished central involution $j$ is nontrivial.
+The central corner $(1-\lambda(j))L(\Gamma)/2$ has normalized trace
+and a perfect left/right regular strategy: equation observables
+commute in each constraint, square to $I$, and their product is the
+specified sign because $j=-I$ in the corner.
+Use their joint spectral projections on the left and the
+commutant mirrors of variable observables on the right.
+Consistency and each equation are then exact.
+A factor fibre is a finite factor host; tensoring with $R_{\rm hyp}$ gives
+$\II_1$. This is the tracial mechanism in
+\cite[Proposition 7.4]{ReadType}.
+
+Spatial perfect play implies finite-dimensional perfect play for
+linear-system games by Cleve--Mittal \cite{CM} and
+\cite[Theorem 5]{CLS}; Slofstra \cite{SlofstraNonclosed} uses this
+implication in the nonclosure construction. We give the argument
+for completeness. Each variable appearing in a constraint has an
+Alice involution with a self-adjoint Bob mirror on the state vector,
+by perfect consistency. Equality of those vectors makes Alice's
+trace-class marginal commute with every such involution.
+The within-constraint products and parity equations hold on the
+marginal support, by the zero-loss equations and support separation.
+A positive density eigenvalue has a nonzero finite-dimensional
+eigenspace reducing all variable involutions.
+Restriction to it preserves the products and all constraint equations.
+Its maximally entangled vector with transposed Bob variables is a
+finite-dimensional perfect strategy, a contradiction.
+For a mixed spatial state first purify; the same Alice eigenprojection
+argument applies. Type-I hosting decomposes into spatial factor
+fibres, so it is also excluded.
+Thus $\perf(\II_1)\not\subseteq\perf(\mathrm I)$.
+
+Every type-I factor host tensored with $R_{\rm hyp}$ has type $\II_1$ in finite
+dimension and type $\II_\infty$ in infinite dimension; a further
+$B(\ell^2)$ amplification handles the former case.
+Every $\II_1$ host similarly amplifies to $\II_\infty$.
+The two witnesses just constructed prove
+\[
+ \perf(\mathrm I)\ \text{and}\ \perf(\II_1)
+ \text{ are incomparable},\qquad
+ \perf(\mathrm I),\,\perf(\II_1)
+ \subsetneq\perf(\II_\infty).
+\]
+Equal arithmetical completeness does not imply equal languages.

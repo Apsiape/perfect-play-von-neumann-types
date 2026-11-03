@@ -1,0 +1,37 @@
+{
+  "bibtex_log_sha256": "4c85800aa181bb21e35ad4f501b4c4f26b65b17e3090f475af1b6c16f4b50594",
+  "box_defects": 0,
+  "builds": [
+    {
+      "bibtex_log_sha256": "c0d4db1d556e030f9fc3383de8a4c03f912a9df7179b21ba8c8e77223c01af22",
+      "build": 1,
+      "final_log_sha256": "60a92ed083266711bccface0583addf97adda21e6331122b769a7ab47035de55",
+      "pdf_sha256": "396e42675abce6c14a6f90d52dacfe70897546e7a6c85c212f0b098e02d59798",
+      "pdf_text_sha256": "15636be7cdbc872a08e8885966a0fcea2714b26a1e02ef2631fda7dc2e1a2541"
+    },
+    {
+      "bibtex_log_sha256": "4c85800aa181bb21e35ad4f501b4c4f26b65b17e3090f475af1b6c16f4b50594",
+      "build": 2,
+      "final_log_sha256": "5e9bf1c53913aab650c49d8c40899885ac9691a1f6ad08508f0682bf91eae936",
+      "pdf_sha256": "0fbf418e00e68d790661c931f349c51c2e1dde4944d6d949bead0d350b2b0499",
+      "pdf_text_sha256": "15636be7cdbc872a08e8885966a0fcea2714b26a1e02ef2631fda7dc2e1a2541"
+    }
+  ],
+  "commands": [
+    "pdflatex",
+    "bibtex",
+    "pdflatex",
+    "pdflatex",
+    "pdflatex"
+  ],
+  "date": "2026-11-03",
+  "final_log_sha256": "5e9bf1c53913aab650c49d8c40899885ac9691a1f6ad08508f0682bf91eae936",
+  "page_count": 28,
+  "pdf_sha256": "0fbf418e00e68d790661c931f349c51c2e1dde4944d6d949bead0d350b2b0499",
+  "status": "PASS",
+  "title": "Perfect play has different arithmetical complexity in semifinite and type III algebras",
+  "two_fresh_builds_identical_pdf_text": true,
+  "unresolved_references": 0,
+  "version": "1.0.0",
+  "warnings": 0
+}

@@ -1,0 +1,329 @@
+
+\section{Perfect in X but not in Y}\label{sec:discussion}
+Use different fonts for existence languages and operator labels:
+\[
+ \mathsf q=\perf_q,\quad \mathsf E=\perf_{\rm finite\ entropy},\quad
+ \mathsf I=\perf(\mathrm I),
+\]
+\[
+ \mathsf J=\perf(\II_1),\quad \mathsf U=\perf_{\sfhost},\quad
+ \mathsf C=\perf_{\co}.
+\]
+Here $\mathsf q$ requires attainment in finite dimension; it is not the
+value-one language. The inclusions are
+$\mathsf q\subset\mathsf E\subset\mathsf I\subset\mathsf U\subset\mathsf C$
+and $\mathsf q\subset\mathsf J\subset\mathsf U$.
+Equation~\eqref{eq:languageequal} identifies $\mathsf U$ with both
+$\perf(\II)$ and $\perf(\II_\infty)$; Theorem~\ref{thm:III}
+identifies $\mathsf C$ with each fixed type-III language.
+Write
+\[
+ D_2(\Sigma^0_2)=\{A\setminus B:A,B\in\Sigma^0_2\}.
+\]
+This is a class of differences, not the intersection of the two
+pointclasses $\Sigma^0_2$ and $\Pi^0_2$. The canonical complete
+language is $\{(e,f):e\in\mathrm{FIN},\ f\notin\mathrm{FIN}\}$,
+where $\mathrm{FIN}$ is the $\Sigma^0_2$-complete set of indices
+of finite c.e.\ sets. Indeed reduce the two $\Sigma^0_2$ predicates
+separately to FIN and pair the resulting indices.
+
+\subsection{Exact conjunction and disjunction}
+\begin{backgroundlemma}[Exact game operations]
+Uniform effective operations $G\wedge H$ and $G\vee H$ satisfy,
+for every $\mathsf X\in\{\mathsf q,\mathsf E,\mathsf I,
+\mathsf J,\mathsf U,\mathsf C\}$,
+\[
+ G\wedge H\in\mathsf X\iff G,H\in\mathsf X,\qquad
+ G\vee H\in\mathsf X\iff G\in\mathsf X\text{ or }H\in\mathsf X.
+\]
+The same statements hold for each of the type languages in this paper.
+\end{backgroundlemma}
+\begin{proof}
+First pad question and answer alphabets to common finite alphabets.
+For an original zero-weight question pair accept everything; preserve
+its original predicate on positive-weight pairs. Give every padded
+question pair positive rational weight, accept all pairs involving
+fresh questions, and reject a padded answer on an original question.
+This changes no perfect-play language. It permits fixed common
+question alphabets with full support; no implication below relies on
+an untested pair.
+
+For conjunction, send both players the same tag and questions for
+that tagged game, and test its predicate. A perfect strategy restricts
+to either tag in the same ambient algebra and state. Conversely,
+tensor two perfect strategies and on a tagged question measure the
+appropriate factor. Type I is closed under tensor products, as are
+finite factors, type $\II_\infty$ factors, and semifinite algebras.
+Amplification gives the stated $\II$ existence languages when needed.
+For $\mathsf E$ use pure spatial witnesses: marginal entropies add,
+so their sum is finite. Finite-dimensional witnesses stay finite.
+Commuting strategies tensor as well. For $\III_\lambda$ use its
+language equality with $\mathsf C$ from Theorem~\ref{thm:III}; no
+closure of that subtype under direct tensoring is asserted.
+
+For disjunction, ask the common questions and require each answer to
+name a branch $s\in\{G,H\}$ as well as an answer in that branch.
+Reject mismatched branches and otherwise test the named predicate.
+A strategy for either game wins by always naming that branch.
+For soundness let $A_{s,a}^x,B_{s,b}^y$ be the effects and put
+$P_s^x=\sum_aA_{s,a}^x$, $Q_s^y=\sum_bB_{s,b}^y$.
+Work first on the faithful standard-form support. The matching
+argument of Section~\ref{sec:intro} makes each branch marginal a
+projection, with
+$P_s^x\xi=Q_s^y\xi$ for every $x,y$. Fixing $y$ and using separation
+makes $P_s^x=P_s$ independent of $x$; likewise $Q_s^y=Q_s$.
+These are opposite mirrors, $P_s\xi=Q_s\xi=:\xi_s$.
+At least one $\xi_s$ is nonzero. Since $0\leq A_{s,a}^x\leq P_s$,
+we have $A_{s,a}^xP_s=P_sA_{s,a}^x=A_{s,a}^x$, and the same holds
+on Bob's side. Complete each branch POVM to the identity by adding
+$I-P_s$ to one Alice answer and $I-Q_s$ to one Bob answer.
+These added effects annihilate $\xi_s$. A losing branch product
+annihilates $\xi$ and, by the displayed support identities, also
+$\xi_s$. Normalizing $\xi_s$ therefore wins branch $s$.
+All effects and the vector remain on the same Hilbert space, in the
+same ambient $M,M'$; the selected vector need not be faithful.
+Thus its host type is preserved. This also handles mixed strategies
+by purification and standardization.
+
+For finite entropy one can work in the original spatial purification.
+Orthogonality of Bob's branch projections gives
+$\rho_A=\sum_s p_s\rho_{A,s}$, $p_s=\|\xi_s\|^2$.
+Entropy concavity, valid also by finite-rank truncation for infinite
+entropy, gives $\sum_s p_sS(\rho_{A,s})\leq S(\rho_A)<\infty$.
+Every positive-weight branch has finite entropy. This proves the last
+model-specific assertion and completes both directions.
+\end{proof}
+
+\subsection{Four fixed separators and two uniform families}
+Denote the companion's Weyl-clock reduction by $G^s_e$ and this
+paper's selector/group reduction by $G^t_e$. Choose both reductions
+for the same predicate $A(e)\equiv e\in\mathrm{FIN}$. Theorems~7.1
+of \cite{Spatial} and C here, including Lemma~\ref{lem:hnn}, give
+\begin{align}
+ G^s_e\in\mathsf E&\iff G^s_e\in\mathsf I\iff A(e),
+ &&\label{eq:sharedE}\\
+ G^t_e\in\mathsf J&\iff G^t_e\in\mathsf U\iff A(e),
+ &G^t_e&\in\mathsf C.\label{eq:sharedJ}
+\end{align}
+Every $G^s_e$ has no finite-dimensional perfect strategy; every
+$G^t_e$ is commuting perfect with $\omega_q=1$.
+The chained lemma additionally excludes $G^s_e$ from $\mathsf J$
+and places it in $\mathsf U$ (Section~\ref{sec:sep}). The reductions
+below use only its displayed spatial coordinates: $R_*$ supplies
+the finite-host exclusion wherever it is needed.
+No assumption about spatial perfection of a YES $G^t_e$ is made.
+
+Take the fixed one-bridge game $R_*$ of Section~\ref{sec:shiftseparator}. Its shift model has root entropy $2$ bits and its finite compiler
+factors preserve finite entropy. The finite-corner KMS contradiction
+there proves that it has no finite host. Thus its complete profile
+uses only the one-bridge assembly.
+
+Let $T_*$ be the tracial solution-group game constructed in
+Section~\ref{sec:sep}. It is in $\mathsf J\setminus\mathsf I$;
+that section proved spatial perfection would imply finite perfection.
+Let $K_{\Cat}$ be the compiled Catalan game of
+\cite[Theorem C and Sections 3 and 6]{Entropy}. Its perfect spatial
+strategies have infinite marginal entropy, so it is in
+$\mathsf I\setminus\mathsf E$. Lemma~\ref{lem:chain} with $k=2$ applies to its nine-corner assembly:
+activity $e_{g-1}+\mathsf M_g$, root mass $1/25$, transported encodings
+$b_+,b_-,p,q,c$ (names of \cite[Section 6]{Entropy}), and the source-only polynomials of
+\cite[Section 6]{Entropy}. Thus its extracted isometry $A$ has
+modular ratio $1/4$ also on a commuting normal host. In a finite root corner $A$ would be unitary,
+and KMS would give $1=1/4$; hence it is outside $\mathsf J$ as well.
+Finally choose a fixed NO instance of $G^t$ and call it $Q_*$.
+Theorem C gives $Q_*\in\mathsf C\setminus\mathsf U$ and
+$\omega_q(Q_*)=1$. Their complete profiles are
+\begin{center}\small
+\begin{tabular}{@{}lcccccc@{}}
+\toprule & $\mathsf q$ & $\mathsf E$ & $\mathsf I$ & $\mathsf J$ & $\mathsf U$ & $\mathsf C$\\\midrule
+$R_*$ &0&1&1&0&1&1\\
+$T_*$ &0&0&0&1&1&1\\
+$K_{\Cat}$ &0&0&1&0&1&1\\
+$Q_*$ &0&0&0&0&0&1\\\bottomrule
+\end{tabular}
+\end{center}
+In particular $R_*\wedge T_*$ is in $\mathsf U$ but in neither
+$\mathsf I$ nor $\mathsf J$, so even
+$\mathsf I\cup\mathsf J\subsetneq\mathsf U$.
+The remaining inclusions asserted above are strict: $R_*$ separates
+$\mathsf q$ from $\mathsf E$, $K_{\Cat}$ separates $\mathsf E$
+from $\mathsf I$, $T_*$ separates $\mathsf I$ from $\mathsf U$,
+and $Q_*$ separates $\mathsf U$ from $\mathsf C$.
+Both $\mathsf E$ and $\mathsf I$ are incomparable with $\mathsf J$.
+
+\Needspace{16\baselineskip}
+\subsection{The table, with reductions for every nonempty entry}
+\begin{theorem}[Directional differences]\label{thm:differences}
+The following table gives row minus column. Each suffix c means
+computable many-one completeness for the displayed pointclass.
+The symbol $D^\dagger$ means membership in $D_2(\Sigma^0_2)$,
+$\Sigma^0_2$-hardness and $\Pi^0_2$-hardness; completeness remains open.
+\begin{center}\small
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}lcccccc@{}}
+\toprule & $\mathsf q$&$\mathsf E$&$\mathsf I$&$\mathsf J$&$\mathsf U$&$\mathsf C$\\\midrule
+$\mathsf q$&$\varnothing$&$\varnothing$&$\varnothing$&$\varnothing$&$\varnothing$&$\varnothing$\\
+$\mathsf E$&$\Sigma^0_2$-c&$\varnothing$&$\varnothing$&$D_2$-c&$\varnothing$&$\varnothing$\\
+$\mathsf I$&$\Sigma^0_2$-c&$D_2$-c&$\varnothing$&$D_2$-c&$\varnothing$&$\varnothing$\\
+$\mathsf J$&$\Sigma^0_2$-c&$D_2$-c&$D_2$-c&$\varnothing$&$\varnothing$&$\varnothing$\\
+$\mathsf U$&$\Sigma^0_2$-c&$D^\dagger$&$D^\dagger$&$D_2$-c&$\varnothing$&$\varnothing$\\
+$\mathsf C$&$\Pi^0_1$-c&$\Pi^0_2$-c&$\Pi^0_2$-c&$\Pi^0_2$-c&$\Pi^0_2$-c&$\varnothing$\\\bottomrule
+\end{tabular}
+\end{center}
+\end{theorem}
+\begin{proof}
+All empty entries follow from the stated inclusions. For upper bounds,
+$\mathsf q\in\Sigma^0_1$, $\mathsf E,\mathsf I,\mathsf J,\mathsf U
+\in\Sigma^0_2$, and $\mathsf C\in\Pi^0_1$.
+A difference between two middle languages is therefore in $D_2$.
+For a middle $\mathsf X$, $\mathsf X\setminus\mathsf q\in\Sigma^0_2$:
+write its predicate as $\exists k\forall m$ for $\mathsf X$ and
+conjoin the $\Pi^0_1$ predicate for nonmembership in $\mathsf q$.
+Also $\mathsf C\setminus\mathsf q\in\Pi^0_1$ and
+$\mathsf C\setminus\mathsf X\in\Pi^0_2$.
+It remains to prove the matching lower bounds.
+
+For the four incomparable entries use
+$G^s_e\wedge R_*$ as the $\mathsf E$- or $\mathsf I$-side family,
+and $G^t_f\wedge T_*$ as the $\mathsf J$-side family.
+Their disjunction has $\mathsf E$ and $\mathsf I$ coordinates
+exactly $A(e)$ and $\mathsf J$ coordinate exactly $A(f)$.
+Thus its membership in either $\mathsf E\setminus\mathsf J$ or
+$\mathsf I\setminus\mathsf J$ is $A(e)\wedge\neg A(f)$.
+Swap $e,f$ between the two branches for the reverse differences.
+The canonical $D_2$ problem reduces in all four cases.
+This settles I-ONLY, defined here as $\mathsf I\setminus\mathsf J$.
+It cannot mean absence of every type-II host, since
+$\mathsf I\subset\mathsf U$.
+
+For the $\mathsf q$ column, use $G^s_e$ for $\mathsf E$ and
+$\mathsf I$; use $G^t_e\wedge T_*$ for $\mathsf J$ and
+$\mathsf U$. Their larger coordinate is $A(e)$ and their
+finite-dimensional coordinate is identically zero. Each such entry
+is therefore $\Sigma^0_2$-hard.
+
+For the four rightward entries of the $\mathsf C$ row, use
+$G^s_e\vee Q_*$ when $\mathsf X=\mathsf E,\mathsf I$, and
+$G^t_e\vee Q_*$ when $\mathsf X=\mathsf J,\mathsf U$.
+The commuting coordinate is always one and the $\mathsf X$
+coordinate is exactly $A(e)$, giving $\Pi^0_2$-hardness.
+These instances all have $\omega_q=1$, since choosing branch $Q_*$
+approximates perfection in finite dimension.
+For $\mathsf C\setminus\mathsf q$, take a $\Sigma^0_1$-complete
+finite-perfection reduction $M_e$ with
+$M_e\in\mathsf q\iff e$ halts, available by perfect completeness
+in \cite[Theorem 12.6]{MIPRE} and finite-dimensional feasibility.
+Then $M_e\vee K_{\Cat}$ is always commuting perfect, has
+$\omega_q=1$ because $K_{\Cat}$ is spatial perfect, and is in
+$\mathsf q$ exactly when $e$ halts. Nonhalting reduces to the
+difference, proving $\Pi^0_1$-hardness even under the promise.
+
+For the two remaining complete nested differences use a shared family.
+In general suppose $\mathsf Y\subset\mathsf X$ and a computable
+family $\mathcal F_e$ has both coordinates equal to $A(e)$. Fix
+$H\in\mathsf X\setminus\mathsf Y$. For
+\begin{equation}\label{eq:sharedcriterion}
+ \Lambda(e,f)=\mathcal F_e\wedge(H\vee \mathcal F_f)
+\end{equation}
+the $\mathsf X$ coordinate is $A(e)$ and the $\mathsf Y$
+coordinate is $A(e)\wedge A(f)$. The difference coordinate is
+therefore $A(e)\wedge\neg A(f)$, proving $D_2$-hardness.
+Apply this first with $(\mathsf X,\mathsf Y)=(\mathsf I,\mathsf E)$,
+$\mathcal F_e=G^s_e$ and $H=K_{\Cat}$, using \eqref{eq:sharedE}.
+Apply it again with $(\mathsf X,\mathsf Y)=(\mathsf U,\mathsf J)$,
+$\mathcal F_e=G^t_e$ and $H=R_*$, using \eqref{eq:sharedJ}.
+Thus INF-ENTROPY-ONLY and $\mathsf U\setminus\mathsf J$ are
+$D_2(\Sigma^0_2)$-complete. The required YES witness has finite entropy by
+\cite[Theorem 7.1]{Spatial}.
+
+Finally, for $\mathsf U\setminus\mathsf I$ and
+$\mathsf U\setminus\mathsf E$, the map $e\mapsto G^t_e\wedge T_*$
+is $\Sigma^0_2$-hard: its $\mathsf U$ coordinate is $A(e)$ and
+both spatial coordinates vanish. The map $e\mapsto G^s_e\vee T_*$
+is $\Pi^0_2$-hard: its $\mathsf U$ coordinate is one and both
+$\mathsf E,\mathsf I$ coordinates equal $A(e)$.
+Together with the $D_2$ upper bound, this proves exactly the two
+$D^\dagger$ entries. The theorem makes no completeness claim for them.
+\end{proof}
+
+\begin{corollary}\label{cor:entropyonly}
+The language of games with perfect spatial play but no finite-entropy
+perfect spatial strategy is $D_2(\Sigma^0_2)$-complete.
+In particular it belongs to neither $\Sigma^0_2$ nor $\Pi^0_2$.
+\end{corollary}
+\begin{proof}
+The identification is $\mathsf I\setminus\mathsf E$ in the theorem.
+A $D_2$-complete language is hard for both $\Sigma^0_2$ and
+$\Pi^0_2$ by fixing one of the canonical FIN indices to a YES or NO
+index. Membership in either pointclass would collapse these two
+pointclasses, contradicting strictness of the arithmetical hierarchy.
+\end{proof}
+The corollary concerns exact attainment; it asserts no rate at
+which entropy must diverge for near-optimal strategies.
+
+For differences between middle models, value-one padding can
+be made explicit. Replacing $G$ by $G\vee Q_*$ preserves all lower
+coordinates and sets the commuting coordinate to one, while forcing
+$\omega_q=1$. To remove finite-dimensional perfect play as well,
+use $G\wedge(R_*\vee T_*)$; the second factor has all five
+infinite-model coordinates equal to one and its $\mathsf q$
+coordinate zero. In particular \eqref{eq:sharedcriterion} for
+INF-ENTROPY-ONLY already has no finite-dimensional perfect instance;
+adding $Q_*$ also makes every instance value one.
+The $\mathsf C$-row hardness families above already have value one,
+including the separate $\mathsf C\setminus\mathsf q$ construction.
+
+\subsection{The remaining nested differences}
+For a nested pair $\mathsf Y\subset\mathsf X$ of $\Sigma^0_2$-complete
+languages with a separator $H$, independent hardness families give
+both kinds of hardness: $G_X(e)\wedge H$ has difference predicate
+$A(e)$ and $G_Y(e)\vee H$ has difference predicate $\neg A(e)$.
+They do not by themselves provide the shared family required by
+\eqref{eq:sharedcriterion}. This explains the two open table cells.
+We use II-ONLY to mean $\mathsf U\setminus\mathsf I$, with
+$\mathsf U\setminus\mathsf E$ its finite-entropy variant; the
+incomparable difference $\mathsf J\setminus\mathsf I$ is already
+complete by the theorem.
+
+\begin{remark}[A finite monotone obstruction]
+An exhaustive Boolean check in the verification bundle ranges over all 7581
+monotone Boolean functions of five inputs
+$G^t_e,G^t_f,G^s_e,G^s_f,T_*$ and all profiles consistent with the
+proved coordinates. For $\mathsf U\setminus\mathsf I$, none realizes
+$A(e)\wedge\neg A(f)$ uniformly over the unproved spatial coordinates
+of $G^t$. Even setting both of those coordinates optimistically to
+zero gives none. With a shared family $\mathcal F_e,\mathcal F_f$ as two inputs,
+351 functions do realize it. This is a bounded exhaustive check,
+not an impossibility theorem for new game constructions. Separate completeness and the inclusion lattice do not supply
+the shared-family equivalence needed by this reduction.
+\end{remark}
+
+An open route is a selector-fed Fock tableau, replacing the Weyl
+clock by a 16-ary critical selector. One would require commuting
+selector and tableau labels and an equality reader
+\[
+ (2C_{\rm ctr}-C_{\rm sel})P_{\rm ret}=0,\qquad
+ T_{\rm inv}(2C_{\rm ctr}-C_{\rm sel})
+ =\tfrac18 C_{\rm ctr}C_{\rm sel}(I-P_{\rm ret}),
+ \qquad P_HP=0.
+\]
+The intended pulse selects a finite candidate, and a finite-depth
+selector tensored with the Fock tableau would be the finite-entropy
+YES model. What remains open is soundness of the additional selector/tableau
+relations with the extra defect-isometry family, and the resulting
+shared-family equivalence
+$\mathsf E(\mathcal F_e)=\mathsf I(\mathcal F_e)=\mathsf U(\mathcal F_e)=A(e)$.
+These equations describe the proposed shared-family construction. Completeness for both
+II-ONLY variants therefore remains open.
+
+\section{Scope and remaining questions}\label{sec:scope}
+These are existence languages: the host and its normal state may be
+chosen together. They do not decide whether a prescribed factor and
+state realize a correlation, or determine the least resources of a
+strategy. Beyond the two open nested differences, natural questions
+ask which syntactic classes force finite-entropy spatial perfection
+whenever spatial perfection is possible, and how quantitative
+entropy requirements interact with the difference classification.
+The finite-algebra YES model of the present selector/group family
+alone gives no spatial YES model; replacing that missing assertion
+by separate completeness would not settle either open cell.

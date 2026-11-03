@@ -1,0 +1,77 @@
+CLAUSE-LEVEL CLAIM AND ATTRIBUTION MAP
+
+Priority labels below concern this paper's contribution relative to its cited
+inputs. NEW means a claimed contribution, with priority explicitly provisional.
+They are not an exhaustive bibliographic certificate.
+
+ABSTRACT AND THEOREM A
+1. Finite, II_1, II_infinity, II and semifinite perfect-host languages are
+   Sigma^0_2-complete: NEW. Upper bound: finite-corner overlap and recursive
+   moment compactness. Lower bound: critical selector, effective embedding,
+   normal commuting Boolean compiler and finite-algebra YES models.
+2. Each fixed III_lambda language equals commuting perfection: NEW.
+   Input mechanisms: Takesaki expectation theorem, Connes Section 3.6,
+   Haagerup--Musat Lemma 3.8, Connes--Takesaki flow of weights.
+3. Its Pi^0_1-completeness: NEW as the subtype conclusion; commuting Pi^0_1
+   completeness is KNOWN (Slofstra; Mousavi--Nezhadi--Yuen Theorem 6.4).
+4. III-ONLY Pi^0_2-completeness, with every hardness instance commuting
+   perfect and quantum value one: NEW. All-instance KMS model and finite-tree
+   approximate construction are given separately in Theorem C.
+5. Type I and II_1 are incomparable: NEW as the combined conclusion.
+   I not contained in II_1 uses only the new fixed one-bridge shift separator.
+   II_1 not contained in I is KNOWN (ReadType Proposition 7.4 and Slofstra's
+   nonclosure mechanism); the spatial-to-finite implication is credited to
+   Cleve--Mittal, Cleve--Liu--Slofstra Theorem 5 and Slofstra.
+6. Both languages are strict subsets of II_infinity: NEW combined conclusion,
+   using standard finite amplification and the two credited separators.
+7. I-ONLY and INF-ENTROPY-ONLY D_2(Sigma^0_2) classifications: NEW.
+   All four incomparable entries use (Gs AND R*) OR (Gt AND T*).
+   Gs finite-host membership is not assumed in these reductions.
+8. II-ONLY and finite-entropy variant: NEW upper bounds and both hardness
+   bounds; completeness is explicitly OPEN. No shared-family equivalence is
+   inferred from separate completeness.
+
+KNOWN INPUTS KEPT AS BACKGROUND WITH CITATIONS
+- Finite-dimensional Sigma^0_1: feasibility and MIP*=RE Theorem 12.6.
+- Spatial and finite-entropy Sigma^0_2: Spatial Theorem A and Theorem 7.1.
+- Commuting Pi^0_1: Slofstra; MNY Theorem 6.4.
+- Quantum value-one Pi^0_2: MNY Theorem 6.9.
+- Standard-form support and matched events: ReadType Lemma 1.6.
+- Arbitrary-normal calibrated bridge: ReadType Lemma 2.2; the present paper
+  recalls its proof and cites Pedersen--Takesaki Lemma 4.5.
+- Flagged magic-square geometry: Mancinska; square origin: Mermin and Peres.
+- Spatial label refinement and rational-row tools: Entropy Lemma 4.2,
+  Theorem B and Eq. (32). Arbitrary commuting-host extension is the new step.
+- Higman embedding: Higman 1961, with effective form Chiodo Theorem 2.2.
+- HNN extension: Higman--Neumann--Neumann 1949. Craig coding: Craig 1953.
+- Catalan infinite-entropy game: Entropy Theorem C and Sections 3 and 6.
+
+NEW LEMMA AND SEPARATOR CHECK
+The fixed separator compiles A*A=I, AA*=I-P_circ, modular ratio 1/2 by
+the one-bridge assembly, with root shift density 2^(-m-1). KMS forces
+phi(P)=phi(e0)/2 while finiteness forces P=0. Entropy is 2 bits before
+finite ancillary factors. The complete profile is (0,1,1,0,1,1).
+The chained lemma specifies k conditional copies on e_(g-1)+M_g, a global
+orthogonal cover, one separate refinement per label per bridge, actual
+common transports, and simultaneous completeness. Its normalizer is
+1+4(2+...+2^k). General centralizer-polynomial range rows cover the Catalan
+input literally. k=2 and k=4 are matched to the cited source assemblies.
+
+
+CLAIM-BY-CLAIM BODY CHECK
+Upper bound: bounded moments and compact closed cylinders; no convergence
+rate assumed. Selector: semifinite density windows exclude a full critical
+Cuntz pair; telescoping and injective C give a finite terminal depth.
+Group reader: explicit good-word witness, injective embedding and one HNN
+flip on a selected good depth; no computed arbitrary group word problem.
+Compiler: conditional support, shared frame, separate label questions,
+finite centralizer polar completion and retained nonsynchronous tests.
+Uniform promises: KMS model exact for every input; approximation constant
+independent of finite-tree depth. Finite graph norm check constructs the
+actual lifted matrix instead of comparing two forms of the same fraction.
+Subtype transfer: expected inclusions preserve correlations; the core center
+and dual action determine circle/torus flows and exclude semifiniteness.
+Rotation: exact enclosures and tail base plus the written induction; no
+finite sweep is represented as a proof of an infinite minimum.
+Difference table: all nonempty reductions checked adversarially; nested
+II-ONLY completeness and additional selector/tableau soundness remain open.

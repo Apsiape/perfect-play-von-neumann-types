@@ -1,0 +1,86 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1.08in]{geometry}
+\usepackage{booktabs,array,longtable,enumitem,microtype,xcolor,needspace}
+\usepackage[colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
+\setlength{\emergencystretch}{2em}
+\setlist{nosep}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem*{theoremA}{Theorem A (classification)}
+\newtheorem*{theoremB}{Theorem B (rational-row compiler)}
+\newtheorem*{theoremC}{Theorem C (uniform reduction)}
+\newtheorem*{theoremD}{Theorem D (near-optimal entropy)}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\Cat}{Cat}
+\DeclareMathOperator{\ran}{ran}
+\DeclareMathOperator{\supp}{supp}
+\newcommand{\HH}{\mathcal H}
+\newcommand{\WW}{\mathcal W}
+\newcommand{\id}{I}
+\newcommand{\psicat}{\psi_{\mathrm{Cat}}}
+\newcommand{\hcat}{h_{\mathrm{Cat}}}
+\newcommand{\PhiD}{\Phi_{256}}
+
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem*{backgroundlemma}{Background lemma}
+\newcommand{\perf}{\mathrm{PERF}}
+\newcommand{\sfhost}{\mathrm{sf}}
+\newcommand{\finhost}{\mathrm{fin}}
+\newcommand{\co}{\mathrm{co}}
+\newcommand{\II}{\mathrm{II}}
+\newcommand{\III}{\mathrm{III}}
+\newcommand{\vN}{\bar\otimes}
+\DeclareMathOperator{\Ad}{Ad}
+\DeclareMathOperator{\Rea}{Re}
+\hypersetup{pdftitle={Perfect play has different arithmetical complexity in semifinite and type III algebras},pdfauthor={Seth Douglas and Nidhal Mghirbi}}
+\title{Perfect play has different arithmetical complexity\\ in semifinite and type III algebras}
+\author{Seth Douglas \and Nidhal Mghirbi}
+\date{Version 1.0.0, November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+For finite rational nonlocal games, existence of perfect normal play in a type
+$\II_1$ algebra, a type $\II_\infty$ algebra, or any semifinite algebra is
+$\Sigma^0_2$-complete. For each fixed $\lambda\in[0,1]$, existence in a type
+$\III_\lambda$ factor is equivalent to commuting perfection and is
+$\Pi^0_1$-complete. Existence of commuting perfect play together with absence
+of every normal semifinite perfect strategy is $\Pi^0_2$-complete. Its
+hardness holds on a computable family whose every member is commuting
+perfect and has finite-dimensional quantum value one.
+
+The lower bound combines a critical binary-tree selector, an effective group
+embedding, and a Boolean compiler on arbitrary faithful normal supports.
+The selector finds a finite terminal depth even in diffuse semifinite
+algebras. A finite-corner overlap criterion gives the upper bound.
+The perfect-play languages for type I and type $\II_1$ are incomparable,
+and both are proper subsets of the type $\II_\infty$ language.
+The type-I complexity used here is established in the companion paper.
+Two directional differences are $D_2(\Sigma^0_2)$-complete: perfect play in type I but not in type $\II_1$ (I-ONLY), and perfect spatial play attainable only with infinite entropy (INF-ENTROPY-ONLY). For semifinite-but-not-type-I play
+(II-ONLY) and its finite-entropy variant, completeness remains open;
+both are $\Sigma^0_2$-hard and $\Pi^0_2$-hard.
+\end{abstract}
+\begin{center}\small AI systems assisted with this work. The authors take responsibility for its claims; see How this work was done. This preprint has not been peer reviewed.\end{center}
+\clearpage
+{\small\tableofcontents}
+\clearpage
+\input{sections/intro}
+\input{sections/upper}
+\input{sections/selector}
+\input{sections/group}
+\input{sections/compiler}
+\input{sections/promises}
+\input{sections/typeIII}
+\input{sections/separations}
+\input{sections/discussion}
+\input{sections/methods}
+\appendix
+\input{sections/reproducibility}
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}
